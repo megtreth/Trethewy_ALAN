@@ -1,0 +1,242 @@
+# The script used in R Studio (v 3.6.2) to assess the percent changes of grazing intertidal species and wax discs over the 3 night period, under 3 light treatments and a control at the Bradley's Head Reserve rocky shore
+
+library("ggplot2")
+library("tidyverse")
+library("plyr")
+library("dplyr")
+library("tidyverse")
+library("ggplot2")
+library("car")
+library("phia")
+library("readr")
+library("lme4")
+library("lmerTest")
+library("emmeans")
+library("readr")
+library("ggpubr")
+library("readxl")
+
+rm(list = ls())
+
+Bradleys_Head <- read_excel("OneDrive - Macquarie University/Bradleys_Head_July_Data.xlsx")
+View(Bradleys_Head)
+
+BH_Df <- as.data.frame(unclass(Bradleys_Head))
+str(BH_Df)
+BH_Df$Light_Col_Num = as.factor(BH_Df$Light_Col_Num)
+BH_Df$Distance <- factor(BH_Df$Distance, levels = c("Zero", "One", "Two"))
+str(BH_Df)
+
+
+#Subsetting Night Time Data 
+Night_BH <- subset(BH_Df, Time == "Night", select = c(Treatment, Name, Light_Col_Num, Light_Colour, Date, Time, Phase, Distance, Grazers, Algal_Sp_Coverage, Sessile_Sp_Coverage))
+str(Night_BH)
+Night_BH <- droplevels(Night_BH)
+str(Night_BH)
+Night_BH <- as.data.frame(unclass(Night_BH))
+Night_BH$Distance <- factor(Night_BH$Distance, levels = c("Zero", "One", "Two"))
+Night_BH$Phase <- factor(Night_BH$Phase, levels = c("Before", "After"))
+
+Bradleys_Head_Per_Change <- read_excel("OneDrive - Macquarie University/Bradleys_Head_Graz_Percent.xlsx")
+BH_PC_Df <- as.data.frame(unclass(Bradleys_Head_Per_Change))
+view(BH_PC_Df)
+BH_PC_Df$Percent_Change <- as.numeric(as.character(BH_PC_Df$Percent_Change))
+BH_PC_Df$Distance <- factor(BH_PC_Df$Distance, levels = c("Zero", "One", "Two"))
+str(BH_PC_Df)
+
+
+#Is the data normal
+
+#Overall species richness 
+qqnorm(BH_Df$Species_Richness)
+qqline(BH_Df$Species_Richness, col= "red")
+#Percent Change
+qqnorm(BH_Df$Percent_Change)
+qqline(BH_Df$Percent_Change, col = "red")
+#Grazers
+qqnorm(BH_Df$Grazers)
+qqline(BH_Df$Grazers, col = "red")
+
+# Change of Species Richness 
+Species_Rich <- lmer(Species_Richness ~ Time * Light_Colour + (1|Date) + (1|Light_Col_Num/Light_Colour), data = subset(BH_Df))
+drop1(Species_Rich, test = "Chi")
+plot(fitted(Species_Rich), residuals(Species_Rich))
+Anova(Species_Rich)
+summary(Species_Rich)
+BHSR_emm = emmeans(Species_Rich, specs = pairwise ~ Time, type = "response")
+BHSR_emm$emmeans
+BHSR_emm$contrasts
+BHSR_emm$contrasts %>%  
+  confint()
+test(BHSR_emm)
+
+# Overall species richness under three different light treatments and the control
+Spec_Rich_plot <- ddply(BH_Df, c("Time", "Light_Colour"), summarize, Mean_SR = mean(Species_Richness), SD_SR = sd(Species_Richness))
+ggplot(Spec_Rich_plot, aes(x = Light_Colour, y = Mean_SR)) +
+  geom_bar(stat = "identity") + facet_wrap(.~Time) +
+  ylab("Species Richness") + xlab("Light Treatment Colour") +
+  geom_errorbar(aes(ymin = Mean_SR - SD_SR, ymax = Mean_SR + SD_SR), width = 0.2) +
+  theme_bw() + theme(panel.border = element_blank(), panel.grid.major = element_blank(),
+                     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"))+
+  theme(axis.title.y = element_text(size = rel(1.25), angle = 90)) + theme(axis.title.x = element_text(size = rel(1.25), angle = 00)) + 
+  theme(plot.title = element_text(size = rel(1.5), angle = 00)) + 
+  theme(axis.text.x = element_text(size = 12, angle = 00),
+        axis.text.y = element_text(size = 12, angle = 90))
+
+#Algal species coverage
+BH_Algal <- lmer(Algal_Sp_Coverage ~ Light_Colour * Distance + (1|Date) + (1|Light_Col_Num/Light_Colour), data = subset(Night_BH))
+drop1(BH_Algal, test = "Chi")
+plot(fitted(BH_Algal), residuals(BH_Algal))
+Anova(BH_Algal)
+summary(BH_Algal)
+BHA_emm = emmeans(BH_Algal, specs = pairwise ~ Light_Colour, type = "response")
+BHA_emm$emmeans
+BHA_emm$contrasts
+BHA_emm$contrasts %>%  
+  confint()
+test(BHA_emm)
+
+
+Algal_plot <- ddply(BH_Df, c("Distance", "Light_Colour"), summarize, Mean_AA = mean(Algal_Sp_Coverage), SD_AA = sd(Algal_Sp_Coverage))
+ggplot(Algal_plot, aes(x = Distance, y = Mean_AA)) +
+  geom_bar(stat = "identity") + facet_wrap(.~Light_Colour) +
+  ylab("Percent Cover (%)") + xlab("Distance from Light Colour Treatment (m)") +
+  geom_errorbar(aes(ymin = Mean_AA - SD_AA, ymax = Mean_AA + SD_AA), width = 0.2) +
+  theme_bw() + theme(panel.border = element_blank(), panel.grid.major = element_blank(),
+                     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"))+
+  theme(axis.title.y = element_text(size = rel(1.25), angle = 90)) + theme(axis.title.x = element_text(size = rel(1.25), angle = 00)) + 
+  theme(plot.title = element_text(size = rel(1.5), angle = 00)) + 
+  theme(axis.text.x = element_text(size = 12, angle = 00),
+        axis.text.y = element_text(size = 12, angle = 90))
+
+# Sessile species overage
+BH_Sessile <- lmer(Sessile_Sp_Coverage ~ Light_Colour * Distance + (1|Date) + (1|Light_Col_Num/Light_Colour), data = subset(Night_BH))
+drop1(BH_Sessile, test = "Chi")
+plot(fitted(BH_Sessile), residuals(BH_Sessile))
+Anova(BH_Sessile)
+summary(BH_Sessile)
+BHS_emm = emmeans(BH_Sessile, specs = pairwise ~ Light_Colour, type = "response")
+BHS_emm$emmeans
+BHS_emm$contrasts
+BHS_emm$contrasts %>%  
+  confint()
+test(BHS_emm)
+
+Sessile_plot <- ddply(BH_Df, c("Distance", "Light_Colour"), summarize, Mean_S = mean(Sessile_Sp_Coverage), SD_SS = sd(Sessile_Sp_Coverage))
+ggplot(Sessile_plot, aes(x = Distance, y = Mean_S)) +
+  geom_bar(stat = "identity") + facet_wrap(.~Light_Colour) +
+  ylab("Percent Cover (%)") + xlab("Distance from Light Colour Treatment (m)") +
+  geom_errorbar(aes(ymin = Mean_S - SD_SS, ymax = Mean_S + SD_SS), width = 0.2) +
+  theme_bw() + theme(panel.border = element_blank(), panel.grid.major = element_blank(),
+                     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"))+
+  theme(axis.title.y = element_text(size = rel(1.25), angle = 90)) + theme(axis.title.x = element_text(size = rel(1.25), angle = 00)) + 
+  theme(plot.title = element_text(size = rel(1.5), angle = 00)) + 
+  theme(axis.text.x = element_text(size = 12, angle = 00),
+        axis.text.y = element_text(size = 12, angle = 90))
+
+
+#Overall percent change
+Graz_Change_Overall <- lmer(Percent_Change ~ Light_Colour * Distance + (1|Name/Light_Colour), data = subset(BH_PC_Df))
+drop1(Graz_Change_Overall, test = "Chi")
+plot(fitted(Graz_Change_Overall), residuals(Graz_Change_Overall))
+Anova(Graz_Change_Overall)
+summary(Graz_Change_Overall)
+PC_Graz_over_emm = emmeans(PerCent_Graz_Overall, specs = pairwise ~ Distance|Light_Colour, type = "response")
+PC_Graz_over_emm$emmeans
+PC_Graz_over_emm$contrasts
+PC_Graz_over_emm$contrasts %>%
+  confint()
+test(PC_Graz_over_emm)
+
+# Percent change of intertidal grazing species overall, under three light treatments and a control
+P_Change_plot <- ddply(BH_PC_Df, c("Light_Colour", "Distance"), summarize, Mean_PCO = mean(Percent_Change), SD_PCO = sd(Percent_Change))
+ggplot(P_Change_plot, aes(x = Distance, y = Mean_PCO)) +
+  geom_point(stat = "identity") + facet_wrap(.~Light_Colour) +
+  ylab("Percent Change (%)") + xlab("Distance from Light Colour Treatment (m)") +
+  geom_errorbar(aes(ymin = Mean_PCO - SD_PCO, ymax = Mean_PCO + SD_PCO), width = 0.2) +
+  theme_bw() + theme(panel.border = element_blank(), panel.grid.major = element_blank(),
+                     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"))+
+  theme(axis.title.y = element_text(size = rel(1.25), angle = 90)) + theme(axis.title.x = element_text(size = rel(1.25), angle = 00)) + 
+  theme(plot.title = element_text(size = rel(1.5), angle = 00)) + 
+  theme(axis.text.x = element_text(size = 12, angle = 00),
+        axis.text.y = element_text(size = 12, angle = 90))+
+  theme(strip.text.x = element_text(size = 12))
+
+
+# WAX DISC 
+Light_Exp_WD_Data <- read_excel("OneDrive - Macquarie University/ALAN Data/Light_Exp_WD_Data.xlsx")
+View(Light_Exp_WD_Data)
+
+BH_WD_Df <- as.data.frame(unclass(Light_Exp_WD_Data))
+str(BH_WD_Df)
+BH_WD_Df$Wax_Disc_Number = as.factor(BH_WD_Df$Wax_Disc_Number)
+BH_WD_Df$Light_C_Num = as.factor(BH_WD_Df$Light_C_Num)
+str(BH_WD_Df)
+BH_WD_Df$Distance <- factor(BH_WD_Df$Distance, levels = c("Zero", "One", "Two"))
+
+#Percent Grazed 
+BHWD_Grazed <- lmer(Percent_Grazed ~ Light_Colour * Distance + (1|Light_C_Num/Light_Colour), data = subset(BH_WD_Df))
+drop1(BHWD_Grazed, test = "Chi")
+plot(fitted(BHWD_Grazed), residuals(BHWD_Grazed))
+Anova(BHWD_Grazed)
+summary(BHWD_Grazed)
+
+
+# The percent of wax discs that was grazed over the experiment duration, under three light treatments and a control
+BHWD_Graz_plot <- ddply(BH_WD_Df, c("Light_Colour", "Distance"), summarise, Mean_BHG = mean(Percent_Grazed), SD_BHG = sd(Percent_Grazed))
+ggplot(BHWD_Graz_plot, aes(x = Distance, y = Mean_BHG)) +
+  geom_bar(stat = "identity") + facet_wrap(.~Light_Colour) +
+  ggtitle("a) Percent of Wax Disc Grazed") + ylab("Percentage (%)") + xlab("Distance from Light Colour Treatment (m)") +
+  geom_errorbar(aes(ymin = Mean_BHG - SD_BHG, ymax = Mean_BHG + SD_BHG), width = 0.2)+
+  theme(axis.title.y = element_text(size = rel(1.25), angle = 90)) + theme(axis.title.x = element_text(size = rel(1.25), angle = 00)) + 
+  theme(plot.title = element_text(size = rel(1.5), angle = 00)) + 
+  theme(axis.text.x = element_text(size = 12, angle = 00),
+        axis.text.y = element_text(size = 12, angle = 90))+
+  theme_bw() + theme(panel.border = element_blank(), panel.grid.major = element_blank(),
+                     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"))+
+  theme(strip.text.x = element_text(size = 12))
+
+#Number of Marks
+BHWD_Marks <- lmer(Num_of_Marks ~ Light_Colour * Distance + (1|Light_C_Num/Light_Colour), data = subset(BH_WD_Df))
+drop1(BHWD_Marks, test = "Chi")
+plot(fitted(BHWD_Marks), residuals(BHWD_Marks))
+Anova(BHWD_Marks)
+summary(BHWD_Marks)
+
+
+# The number of markings on wax discs over the duration of the experiment, under three light treatments and a control
+BHWD_Mark_plot <- ddply(BH_WD_Df, c("Light_Colour", "Distance"), summarise, Mean_BHWDM = mean(Num_of_Marks), SD_BHWDM = sd(Num_of_Marks))
+ggplot(BHWD_Mark_plot, aes(x = Distance, y = Mean_BHWDM)) +
+  geom_bar(stat = "identity") + facet_wrap(.~Light_Colour) +
+  ggtitle("b) Number of Markings on Wax Disc") + ylab("Average Number of Marks") + xlab("Distance from Light Colour Treatment (m)") +
+  geom_errorbar(aes(ymin = Mean_BHWDM - SD_BHWDM, ymax = Mean_BHWDM + SD_BHWDM), width = 0.2)+
+  theme(axis.title.y = element_text(size = rel(1.25), angle = 90)) + theme(axis.title.x = element_text(size = rel(1.25), angle = 00)) + 
+  theme(plot.title = element_text(size = rel(1.5), angle = 00)) + 
+  theme(axis.text.x = element_text(size = 12, angle = 00),
+        axis.text.y = element_text(size = 12, angle = 90))+
+  theme_bw() + theme(panel.border = element_blank(), panel.grid.major = element_blank(),
+                     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"))+
+  theme(strip.text.x = element_text(size = 12))
+
+
+#Diversity of Marks
+BHWD_Div <- lmer(Mark_Diversity ~ Light_Colour * Distance + (1|Light_C_Num/Light_Colour), data = subset(BH_WD_Df))
+drop1(BHWD_Div, test = "Chi")
+plot(fitted(BHWD_Div), residuals(BHWD_Div))
+Anova(BHWD_Div)
+summary(BHWD_Div)
+
+
+# The diversity of markings on wax disc surfaces over the duration of the experiment, under three light treatments and a control
+BHWD_Div_plot <- ddply(BH_WD_Df, c("Light_Colour", "Distance"), summarise, Mean_BHWDD = mean(Mark_Diversity), SD_BHWDD = sd(Mark_Diversity))
+ggplot(BHWD_Div_plot, aes(x = Distance, y = Mean_BHWDD)) +
+  geom_bar(stat = "identity") + facet_wrap(.~Light_Colour) +
+  ggtitle("c) Diversity of Markings on Wax Discs") + ylab("Diversity of Marks") + xlab("Distance from Light Colour Treatment (m)") +
+  geom_errorbar(aes(ymin = Mean_BHWDD - SD_BHWDD, ymax = Mean_BHWDD + SD_BHWDD), width = 0.2)+
+  theme(axis.title.y = element_text(size = rel(1.25), angle = 90)) + theme(axis.title.x = element_text(size = rel(1.25), angle = 00)) + 
+  theme(plot.title = element_text(size = rel(1.5), angle = 00)) + 
+  theme(axis.text.x = element_text(size = 12, angle = 00),
+        axis.text.y = element_text(size = 12, angle = 90))+
+  theme_bw() + theme(panel.border = element_blank(), panel.grid.major = element_blank(),
+                     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"))+
+  theme(strip.text.x = element_text(size = 12))
