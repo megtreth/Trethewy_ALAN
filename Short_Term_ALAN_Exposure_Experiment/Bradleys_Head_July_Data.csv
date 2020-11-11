@@ -1,0 +1,629 @@
+Picture_Number,Treatment,Name,Light_Colour,Date,Time,Phase,Distance,Species_Richness,Grazers,Sea Squirts,Oyster,Tiny Barnacles,Large Barnacle (acorn),Geli,Olva,Corilina,Ralf,Neptunes Necklace,Mulberry Whelk,Large Limpet (Tel),White Ridge Limpet,False Limpet,Tiny Black,Zebra Top Shell,Snake Skin Chiton,Sea Hare,Sea Star,Black Nerite,Elephant Snail,Squishy Limpet
+P7221893,ALAN,Control_1,Control,First,Night,Before,One,8,30,0,5,0,0,0,0,5,35,5,0,2,23,1,0,4,0,0,0,0,0,0
+P7221894,ALAN,Control_1,Control,First,Night,Before,One,8,18,0,5,0,0,0,0,5,45,5,0,1,14,2,0,0,1,0,0,0,0,0
+P7221895,ALAN,Control_1,Control,First,Night,Before,One,5,22,0,15,0,0,0,0,0,30,0,0,3,17,0,0,2,0,0,0,0,0,0
+P7221896,ALAN,Control_1,Control,First,Night,Before,Two,5,11,0,15,0,0,0,0,0,20,0,0,2,7,0,0,2,0,0,0,0,0,0
+P7221897,ALAN,Control_1,Control,First,Night,Before,Two,7,14,0,5,0,0,0,0,5,35,0,0,5,6,0,0,2,1,0,0,0,0,0
+P7221898,ALAN,Control_1,Control,First,Night,Before,Two,6,17,0,5,0,0,0,0,10,25,0,0,3,13,0,0,0,1,0,0,0,0,0
+P7221889,ALAN,Control_1,Control,First,Night,Before,Zero,6,18,0,15,0,0,0,0,0,65,0,8,3,8,0,0,7,0,0,0,0,0,0
+P7221890,ALAN,Control_1,Control,First,Night,Before,Zero,6,11,0,30,0,0,0,0,0,20,0,4,2,4,0,0,5,0,0,0,0,0,0
+P7221891,ALAN,Control_1,Control,First,Night,Before,Zero,6,18,0,20,0,0,0,0,0,10,0,0,1,5,0,0,11,0,0,0,1,0,0
+P7221892,ALAN,Control_1,Control,First,Night,Before,Zero,5,24,0,20,0,0,0,0,0,10,0,0,7,6,0,0,11,0,0,0,0,0,0
+P7221923,Syd,Control_2,Control,First,Night,Before,One,4,7,0,0,0,0,0,0,0,20,0,0,1,3,0,0,0,0,0,3,0,0,0
+P7221924,Syd,Control_2,Control,First,Night,Before,One,2,24,0,0,0,0,0,0,0,75,0,0,0,24,0,0,0,0,0,0,0,0,0
+P7221925,Syd,Control_2,Control,First,Night,Before,One,5,17,0,0,10,0,0,0,0,55,0,0,2,13,0,0,2,0,0,0,0,0,0
+P7221926,Syd,Control_2,Control,First,Night,Before,Two,4,16,0,0,10,0,0,0,0,25,0,0,4,12,0,0,0,0,0,0,0,0,0
+P7221927,Syd,Control_2,Control,First,Night,Before,Two,3,4,0,0,0,0,0,30,0,30,0,0,4,0,0,0,0,0,0,0,0,0,0
+P7221928,Syd,Control_2,Control,First,Night,Before,Two,3,16,0,0,0,0,0,0,0,45,0,0,2,14,0,0,0,0,0,0,0,0,0
+P7221919,Syd,Control_2,Control,First,Night,Before,Zero,4,3,0,0,20,0,0,0,0,80,0,1,3,0,0,0,0,0,0,0,0,0,0
+P7221920,Syd,Control_2,Control,First,Night,Before,Zero,4,16,0,0,10,0,0,0,0,20,0,0,2,14,0,0,0,0,0,0,0,0,0
+P7221921,Syd,Control_2,Control,First,Night,Before,Zero,4,31,0,0,20,0,0,0,0,95,0,0,5,26,0,0,0,0,0,0,0,0,0
+P7221922,Syd,Control_2,Control,First,Night,Before,Zero,2,1,0,0,0,0,0,0,0,30,0,0,1,0,0,0,0,0,0,0,0,0,0
+P7221913,Mac,Red_LED_1,Red LED,First,Night,Before,One,5,55,0,0,65,10,0,0,0,75,0,1,0,55,0,0,0,0,0,0,0,0,0
+P7221914,Mac,Red_LED_1,Red LED,First,Night,Before,One,5,36,0,0,30,5,0,0,0,70,0,3,0,36,0,0,0,0,0,0,0,0,0
+P7221915,Mac,Red_LED_1,Red LED,First,Night,Before,One,4,44,0,0,40,5,0,0,0,65,0,0,0,44,0,0,0,0,0,0,0,0,0
+P7221916,Mac,Red_LED_1,Red LED,First,Night,Before,Two,6,31,0,0,30,0,0,0,0,70,0,0,3,24,0,0,2,0,0,0,2,0,0
+P7221917,Mac,Red_LED_1,Red LED,First,Night,Before,Two,5,48,0,0,25,5,0,0,0,85,0,3,0,48,0,0,0,0,0,0,0,0,0
+P7221918,Mac,Red_LED_1,Red LED,First,Night,Before,Two,5,48,0,0,15,5,0,0,0,80,0,0,5,43,0,0,0,0,0,0,0,0,0
+P7221909,Mac,Red_LED_1,Red LED,First,Night,Before,Zero,4,67,0,0,20,0,0,0,0,85,0,2,0,67,0,0,0,0,0,0,0,0,0
+P7221910,Mac,Red_LED_1,Red LED,First,Night,Before,Zero,3,15,0,0,30,0,0,0,0,95,0,0,0,15,0,0,0,0,0,0,0,0,0
+P7221911,Mac,Red_LED_1,Red LED,First,Night,Before,Zero,4,51,0,0,45,0,0,0,0,95,0,0,3,48,0,0,0,0,0,0,0,0,0
+P7221912,Mac,Red_LED_1,Red LED,First,Night,Before,Zero,6,64,0,0,35,10,0,0,0,95,0,1,2,62,0,0,0,0,0,0,0,0,0
+P7221848,Marine,Red_LED_2,Red LED,First,Night,Before,One,6,6,0,0,5,0,0,5,0,25,0,2,3,3,0,0,0,0,0,0,0,0,0
+P7221852,Marine,Red_LED_2,Red LED,First,Night,Before,One,3,8,0,0,0,0,0,0,0,5,0,0,3,5,0,0,0,0,0,0,0,0,0
+P7221853,Marine,Red_LED_2,Red LED,First,Night,Before,One,6,10,0,0,5,5,0,0,0,10,0,1,3,7,0,0,0,0,0,0,0,0,0
+P7221849,Marine,Red_LED_2,Red LED,First,Night,Before,Two,5,21,0,0,0,15,0,0,0,10,0,1,6,15,0,0,0,0,0,0,0,0,0
+P7221850,Marine,Red_LED_2,Red LED,First,Night,Before,Two,4,9,0,0,5,0,0,0,0,5,0,0,5,4,0,0,0,0,0,0,0,0,0
+P7221851,Marine,Red_LED_2,Red LED,First,Night,Before,Two,5,6,0,0,15,0,0,0,0,5,0,0,2,2,2,0,0,0,0,0,0,0,0
+P7221846,Marine,Red_LED_2,Red LED,First,Night,Before,Zero,5,16,0,0,0,20,0,0,0,15,0,1,7,9,0,0,0,0,0,0,0,0,0
+P7221847,Marine,Red_LED_2,Red LED,First,Night,Before,Zero,4,14,0,0,0,20,0,0,0,10,0,0,6,8,0,0,0,0,0,0,0,0,0
+P7221854,Marine,Red_LED_2,Red LED,First,Night,Before,Zero,6,13,0,0,0,10,0,0,0,15,0,2,7,5,0,0,1,0,0,0,0,0,0
+P7221855,Marine,Red_LED_2,Red LED,First,Night,Before,Zero,4,10,0,0,5,5,0,0,0,0,0,0,8,2,0,0,0,0,0,0,0,0,0
+P7221871,Luxo,White_LED_1,White LED,First,Night,Before,One,8,21,0,10,0,15,0,0,0,5,0,1,6,9,5,0,1,0,0,0,0,0,0
+P7221875,Luxo,White_LED_1,White LED,First,Night,Before,One,6,11,0,15,5,0,0,0,0,0,0,3,1,8,2,0,0,0,0,0,0,0,0
+P7221876,Luxo,White_LED_1,White LED,First,Night,Before,One,6,8,0,5,0,0,0,0,0,10,15,0,4,2,2,0,0,0,0,0,0,0,0
+P7221872,Luxo,White_LED_1,White LED,First,Night,Before,Two,7,26,0,10,0,15,0,0,0,60,0,5,1,21,4,0,0,0,0,0,0,0,0
+P7221873,Luxo,White_LED_1,White LED,First,Night,Before,Two,8,33,0,15,5,15,0,0,0,5,0,3,4,23,6,0,0,0,0,0,0,0,0
+P7221874,Luxo,White_LED_1,White LED,First,Night,Before,Two,5,16,0,15,0,5,0,0,0,0,0,0,7,7,2,0,0,0,0,0,0,0,0
+P7221869,Luxo,White_LED_1,White LED,First,Night,Before,Zero,7,13,0,10,5,10,0,0,0,10,0,0,7,4,2,0,0,0,0,0,0,0,0
+P7221870,Luxo,White_LED_1,White LED,First,Night,Before,Zero,7,19,0,20,0,30,0,0,0,40,0,5,4,8,7,0,0,0,0,0,0,0,0
+P7221877,Luxo,White_LED_1,White LED,First,Night,Before,Zero,5,6,0,15,0,0,0,0,0,10,0,2,2,4,0,0,0,0,0,0,0,0,0
+P7221878,Luxo,White_LED_1,White LED,First,Night,Before,Zero,8,10,0,15,0,5,0,0,0,10,0,1,3,4,2,0,1,0,0,0,0,0,0
+P7221903,Lumen,White_LED_2,White LED,First,Night,Before,One,5,18,0,10,0,5,0,0,0,65,0,0,5,13,0,0,0,0,0,0,0,0,0
+P7221904,Lumen,White_LED_2,White LED,First,Night,Before,One,4,51,0,0,10,0,0,0,0,90,0,1,0,51,0,0,0,0,0,0,0,0,0
+P7221905,Lumen,White_LED_2,White LED,First,Night,Before,One,4,43,0,0,10,0,0,0,0,95,0,0,1,42,0,0,0,0,0,0,0,0,0
+P7221906,Lumen,White_LED_2,White LED,First,Night,Before,Two,3,49,0,0,5,0,0,0,0,95,0,0,0,49,0,0,0,0,0,0,0,0,0
+P7221907,Lumen,White_LED_2,White LED,First,Night,Before,Two,3,58,0,0,5,0,0,0,0,90,0,0,0,58,0,0,0,0,0,0,0,0,0
+P7221908,Lumen,White_LED_2,White LED,First,Night,Before,Two,4,26,0,15,0,0,0,0,0,65,0,0,7,19,0,0,0,0,0,0,0,0,0
+P7221899,Lumen,White_LED_2,White LED,First,Night,Before,Zero,6,47,0,10,0,5,0,0,0,85,0,0,3,43,0,0,0,1,0,0,0,0,0
+P7221900,Lumen,White_LED_2,White LED,First,Night,Before,Zero,5,49,0,10,0,5,0,0,0,45,0,0,2,47,0,0,0,0,0,0,0,0,0
+P7221901,Lumen,White_LED_2,White LED,First,Night,Before,Zero,7,39,0,10,0,5,0,0,0,65,0,1,1,37,0,0,0,0,0,0,0,1,0
+P7221902,Lumen,White_LED_2,White LED,First,Night,Before,Zero,5,26,0,20,0,0,0,0,0,30,0,1,8,18,0,0,0,0,0,0,0,0,0
+P7221882,Glo,Yellow_LED_1,Yellow LED,First,Night,Before,One,5,13,0,10,0,0,0,0,0,25,0,0,3,7,0,0,3,0,0,0,0,0,0
+P7221883,Glo,Yellow_LED_1,Yellow LED,First,Night,Before,One,6,18,0,20,0,0,0,0,0,15,0,0,2,11,3,0,2,0,0,0,0,0,0
+P7221884,Glo,Yellow_LED_1,Yellow LED,First,Night,Before,One,5,16,0,30,0,0,0,0,0,15,0,0,2,9,0,0,5,0,0,0,0,0,0
+P7221885,Glo,Yellow_LED_1,Yellow LED,First,Night,Before,Two,5,20,0,0,0,0,0,0,0,65,0,0,4,11,2,0,3,0,0,0,0,0,0
+P7221886,Glo,Yellow_LED_1,Yellow LED,First,Night,Before,Two,7,22,0,10,0,0,0,0,0,45,5,0,2,15,4,0,0,1,0,0,0,0,0
+P7221887,Glo,Yellow_LED_1,Yellow LED,First,Night,Before,Two,6,16,0,10,0,0,0,0,0,5,0,2,1,13,0,0,2,0,0,0,0,0,0
+P7221879,Glo,Yellow_LED_1,Yellow LED,First,Night,Before,Zero,6,6,0,40,0,0,0,0,0,20,0,2,2,3,0,0,1,0,0,0,0,0,0
+P7221880,Glo,Yellow_LED_1,Yellow LED,First,Night,Before,Zero,6,10,0,15,0,0,0,0,0,20,0,1,0,4,1,0,5,0,0,0,0,0,0
+P7221881,Glo,Yellow_LED_1,Yellow LED,First,Night,Before,Zero,3,3,0,5,0,0,0,0,0,30,0,0,0,3,0,0,0,0,0,0,0,0,0
+P7221888,Glo,Yellow_LED_1,Yellow LED,First,Night,Before,Zero,5,7,0,5,5,0,0,0,0,20,0,0,0,4,0,0,3,0,0,0,0,0,0
+P7221861,Ti,Yellow_LED_2,Yellow LED,First,Night,Before,One,6,19,0,0,0,30,0,0,0,25,0,3,6,12,1,0,0,0,0,0,0,0,0
+P7221862,Ti,Yellow_LED_2,Yellow LED,First,Night,Before,One,8,12,0,25,5,10,0,0,0,5,0,4,4,7,0,0,1,0,0,0,0,0,0
+P7221864,Ti,Yellow_LED_2,Yellow LED,First,Night,Before,One,9,12,0,5,0,45,0,10,0,30,0,2,3,5,2,0,0,2,0,0,0,0,0
+P7221865,Ti,Yellow_LED_2,Yellow LED,First,Night,Before,Two,5,8,0,0,0,10,0,5,0,65,0,0,3,5,0,0,0,0,0,0,0,0,0
+P7221866,Ti,Yellow_LED_2,Yellow LED,First,Night,Before,Two,7,8,0,5,0,40,0,20,0,65,0,0,4,3,0,0,1,0,0,0,0,0,0
+P7221867,Ti,Yellow_LED_2,Yellow LED,First,Night,Before,Two,6,6,0,5,0,20,0,0,0,40,0,3,2,4,0,0,0,0,0,0,0,0,0
+P7221858,Ti,Yellow_LED_2,Yellow LED,First,Night,Before,Zero,7,25,0,0,0,35,0,5,0,20,0,1,7,16,2,0,0,0,0,0,0,0,0
+P7221859,Ti,Yellow_LED_2,Yellow LED,First,Night,Before,Zero,6,7,0,0,0,40,0,20,0,30,0,6,4,3,0,0,0,0,0,0,0,0,0
+P7221860,Ti,Yellow_LED_2,Yellow LED,First,Night,Before,Zero,6,15,0,0,0,20,0,5,0,20,0,2,6,9,0,0,0,0,0,0,0,0,0
+P7221868,Ti,Yellow_LED_2,Yellow LED,First,Night,Before,Zero,6,16,0,10,0,20,0,5,0,15,0,0,6,10,0,0,0,0,0,0,0,0,0
+P7221963,ALAN,Control_1,Control,First,Night,After,One,4,9,0,20,0,0,0,0,0,15,0,0,2,0,0,0,7,0,0,0,0,0,0
+P7221968,ALAN,Control_1,Control,First,Night,After,One,7,10,0,15,5,0,0,0,0,20,0,0,3,2,0,0,4,0,0,1,0,0,0
+P7221969,ALAN,Control_1,Control,First,Night,After,One,7,18,0,15,5,0,0,0,0,10,0,0,4,4,0,5,5,0,0,0,0,0,0
+P7221959,ALAN,Control_1,Control,First,Night,After,Two,7,57,0,0,15,0,0,0,0,75,0,1,4,17,0,35,0,0,0,1,0,0,0
+P7221960,ALAN,Control_1,Control,First,Night,After,Two,6,48,0,0,30,5,0,0,0,15,0,0,5,22,0,21,0,0,0,0,0,0,0
+P7221961,ALAN,Control_1,Control,First,Night,After,Two,7,66,0,10,10,0,0,5,0,35,20,0,0,32,0,34,0,0,0,0,0,0,0
+P7221964,ALAN,Control_1,Control,First,Night,After,Zero,5,9,0,10,5,0,0,0,0,25,0,0,0,5,0,0,4,0,0,0,0,0,0
+P7221965,ALAN,Control_1,Control,First,Night,After,Zero,5,40,0,25,10,0,0,0,0,15,0,0,0,0,0,16,24,0,0,0,0,0,0
+P7221966,ALAN,Control_1,Control,First,Night,After,Zero,6,25,0,5,5,0,0,0,0,70,0,1,0,23,0,0,2,0,0,0,0,0,0
+P7221967,ALAN,Control_1,Control,First,Night,After,Zero,8,23,0,10,15,0,0,0,0,15,10,0,1,12,0,0,8,0,0,2,0,0,0
+P7221988,Syd,Control_2,Control,First,Night,After,One,8,46,0,10,0,40,0,10,0,70,0,10,1,44,0,0,1,0,0,0,0,0,0
+P7221989,Syd,Control_2,Control,First,Night,After,One,5,33,0,25,0,10,0,0,0,0,0,2,7,26,0,0,0,0,0,0,0,0,0
+P7221990,Syd,Control_2,Control,First,Night,After,One,7,17,0,35,0,10,0,5,0,10,0,5,6,11,0,0,0,0,0,0,0,0,0
+P7221991,Syd,Control_2,Control,First,Night,After,Two,5,21,0,20,0,5,0,0,0,0,0,0,10,9,0,0,2,0,0,0,0,0,0
+P7221992,Syd,Control_2,Control,First,Night,After,Two,5,20,0,15,0,0,0,0,0,10,0,3,5,15,0,0,0,0,0,0,0,0,0
+P7221993,Syd,Control_2,Control,First,Night,After,Two,5,24,0,15,0,5,0,0,0,0,0,4,5,19,0,0,0,0,0,0,0,0,0
+P7221984,Syd,Control_2,Control,First,Night,After,Zero,7,38,0,25,0,10,0,0,0,35,0,3,11,26,0,0,1,0,0,0,0,0,0
+P7221985,Syd,Control_2,Control,First,Night,After,Zero,4,22,0,35,0,10,0,0,0,0,0,0,12,10,0,0,0,0,0,0,0,0,0
+P7221986,Syd,Control_2,Control,First,Night,After,Zero,5,18,0,5,0,5,0,0,0,0,5,0,12,6,0,0,0,0,0,0,0,0,0
+P7221987,Syd,Control_2,Control,First,Night,After,Zero,8,21,0,30,5,15,0,0,0,5,0,2,9,10,0,0,2,0,0,0,0,0,0
+P7221974,Mac,Red_LED_1,Red LED,First,Night,After,One,7,51,0,0,0,0,0,0,5,15,10,5,5,39,0,0,7,0,0,0,0,0,0
+P7221975,Mac,Red_LED_1,Red LED,First,Night,After,One,8,14,0,10,0,0,0,0,0,15,20,3,3,8,0,0,2,1,0,0,0,0,0
+P7221976,Mac,Red_LED_1,Red LED,First,Night,After,One,5,12,0,25,0,0,0,0,0,0,0,2,7,3,0,0,2,0,0,0,0,0,0
+P7221977,Mac,Red_LED_1,Red LED,First,Night,After,Two,5,15,0,25,0,0,0,0,0,20,0,3,0,12,0,0,3,0,0,0,0,0,0
+P7221978,Mac,Red_LED_1,Red LED,First,Night,After,Two,5,65,0,10,0,0,0,0,0,15,0,3,3,62,0,0,0,0,0,0,0,0,0
+P7221979,Mac,Red_LED_1,Red LED,First,Night,After,Two,6,30,0,20,0,0,0,0,0,20,0,2,6,21,0,0,3,0,0,0,0,0,0
+P7221970,Mac,Red_LED_1,Red LED,First,Night,After,Zero,4,28,0,20,0,0,0,0,0,0,0,0,4,5,0,0,19,0,0,0,0,0,0
+P7221971,Mac,Red_LED_1,Red LED,First,Night,After,Zero,3,35,0,0,0,0,0,0,0,10,0,0,0,21,0,14,0,0,0,0,0,0,0
+P7221972,Mac,Red_LED_1,Red LED,First,Night,After,Zero,4,30,0,0,0,0,0,0,0,20,0,0,0,17,0,0,12,0,0,1,0,0,0
+P7221973,Mac,Red_LED_1,Red LED,First,Night,After,Zero,6,51,0,10,0,0,0,0,20,5,0,3,0,46,0,0,5,0,0,0,0,0,0
+P7222006,Marine,Red_LED_2,Red LED,First,Night,After,One,6,18,0,0,0,25,0,0,0,20,0,2,8,7,3,0,0,0,0,0,0,0,0
+P7222007,Marine,Red_LED_2,Red LED,First,Night,After,One,4,10,0,0,0,15,0,0,0,15,0,0,6,4,0,0,0,0,0,0,0,0,0
+P7222009,Marine,Red_LED_2,Red LED,First,Night,After,One,5,12,0,0,5,0,0,0,0,25,0,0,3,5,4,0,0,0,0,0,0,0,0
+P7222008,Marine,Red_LED_2,Red LED,First,Night,After,Two,6,8,0,0,5,0,0,0,0,15,0,2,1,6,1,0,0,0,0,0,0,0,0
+P7222010,Marine,Red_LED_2,Red LED,First,Night,After,Two,4,11,0,0,5,0,0,0,0,5,0,0,6,5,0,0,0,0,0,0,0,0,0
+P7222011,Marine,Red_LED_2,Red LED,First,Night,After,Two,6,12,0,0,5,0,0,0,0,5,0,0,4,6,1,0,1,0,0,0,0,0,0
+P7222005,Marine,Red_LED_2,Red LED,First,Night,After,Zero,6,11,0,0,0,10,0,0,0,45,0,2,3,5,3,0,0,0,0,0,0,0,0
+P7222012,Marine,Red_LED_2,Red LED,First,Night,After,Zero,4,10,0,0,20,0,0,0,0,10,0,0,3,7,0,0,0,0,0,0,0,0,0
+P7222013,Marine,Red_LED_2,Red LED,First,Night,After,Zero,6,10,0,0,5,0,0,0,0,20,0,3,4,5,1,0,0,0,0,0,0,0,0
+P7222014,Marine,Red_LED_2,Red LED,First,Night,After,Zero,5,13,0,0,5,0,0,0,0,80,0,0,3,8,0,0,2,0,0,0,0,0,0
+P7221933,Luxo,White_LED_1,White LED,First,Night,After,One,3,1,0,0,0,0,0,5,0,70,0,0,1,0,0,0,0,0,0,0,0,0,0
+P7221936,Luxo,White_LED_1,White LED,First,Night,After,One,4,7,0,0,10,0,0,0,0,75,0,0,1,6,0,0,0,0,0,0,0,0,0
+P7221938,Luxo,White_LED_1,White LED,First,Night,After,One,4,6,0,0,15,0,0,0,0,65,0,0,0,4,2,0,0,0,0,0,0,0,0
+P7221931,Luxo,White_LED_1,White LED,First,Night,After,Two,6,21,0,0,15,0,0,0,0,60,0,4,5,14,0,0,0,0,0,2,0,0,0
+P7221932,Luxo,White_LED_1,White LED,First,Night,After,Two,6,55,0,0,10,0,0,0,0,25,0,2,5,47,3,0,0,0,0,0,0,0,0
+P7221934,Luxo,White_LED_1,White LED,First,Night,After,Two,5,47,0,0,0,0,0,5,0,75,0,0,4,38,5,0,0,0,0,0,0,0,0
+P7221929,Luxo,White_LED_1,White LED,First,Night,After,Zero,6,15,0,0,15,0,0,0,0,20,5,3,2,13,0,0,0,0,0,0,0,0,0
+P7221930,Luxo,White_LED_1,White LED,First,Night,After,Zero,4,17,0,0,15,0,0,0,0,60,0,0,1,16,0,0,0,0,0,0,0,0,0
+P7221935,Luxo,White_LED_1,White LED,First,Night,After,Zero,6,21,0,0,20,0,0,0,0,35,0,3,6,14,0,0,0,0,0,1,0,0,0
+P7221937,Luxo,White_LED_1,White LED,First,Night,After,Zero,5,27,0,0,10,0,0,5,0,80,0,0,4,23,0,0,0,0,0,0,0,0,0
+P7221952,Lumen,White_LED_2,White LED,First,Night,After,One,7,74,0,15,20,10,0,0,0,90,0,4,2,72,0,0,0,0,0,0,0,0,0
+P7221957,Lumen,White_LED_2,White LED,First,Night,After,One,6,121,0,0,5,0,0,0,0,25,0,2,4,51,0,66,0,0,0,0,0,0,0
+P7221958,Lumen,White_LED_2,White LED,First,Night,After,One,5,42,0,5,0,0,0,0,0,0,0,0,12,5,0,24,0,0,0,0,1,0,0
+P7221949,Lumen,White_LED_2,White LED,First,Night,After,Two,6,125,0,0,20,10,0,0,0,85,0,3,1,0,0,124,0,0,0,0,0,0,0
+P7221950,Lumen,White_LED_2,White LED,First,Night,After,Two,6,180,0,0,35,5,0,0,0,85,0,2,0,0,24,156,0,0,0,0,0,0,0
+P7221951,Lumen,White_LED_2,White LED,First,Night,After,Two,6,38,0,0,55,5,0,0,0,35,0,5,0,0,0,35,3,0,0,0,0,0,0
+P7221953,Lumen,White_LED_2,White LED,First,Night,After,Zero,7,71,0,10,20,10,0,0,0,45,0,0,7,61,3,0,0,0,0,0,0,0,0
+P7221954,Lumen,White_LED_2,White LED,First,Night,After,Zero,7,26,0,20,15,5,0,0,0,50,0,2,5,21,0,0,0,0,0,0,0,0,0
+P7221955,Lumen,White_LED_2,White LED,First,Night,After,Zero,5,46,0,15,0,10,0,0,0,35,0,0,10,36,0,0,0,0,0,0,0,0,0
+P7221956,Lumen,White_LED_2,White LED,First,Night,After,Zero,5,73,0,0,0,0,0,0,0,75,0,3,3,46,0,24,0,0,0,0,0,0,0
+P7221943,Glo,Yellow_LED_1,Yellow LED,First,Night,After,One,6,66,0,0,20,10,0,0,0,20,0,0,6,58,0,0,2,0,0,0,0,0,0
+P7221944,Glo,Yellow_LED_1,Yellow LED,First,Night,After,One,6,30,0,0,20,10,0,0,0,25,0,3,2,28,0,0,0,0,0,0,0,0,0
+P7221945,Glo,Yellow_LED_1,Yellow LED,First,Night,After,One,6,71,0,0,45,10,0,0,0,50,0,8,5,66,0,0,0,0,0,0,0,0,0
+P7221946,Glo,Yellow_LED_1,Yellow LED,First,Night,After,Two,7,80,0,0,65,5,0,0,0,70,0,1,3,75,2,0,0,0,0,0,0,0,0
+P7221947,Glo,Yellow_LED_1,Yellow LED,First,Night,After,Two,6,48,0,0,65,5,0,0,0,85,0,1,2,46,0,0,0,0,0,0,0,0,0
+P7221948,Glo,Yellow_LED_1,Yellow LED,First,Night,After,Two,7,56,0,0,75,5,0,0,0,95,5,2,2,54,0,0,0,0,0,0,0,0,0
+P7221939,Glo,Yellow_LED_1,Yellow LED,First,Night,After,Zero,4,45,0,0,35,0,0,0,0,45,0,0,4,41,0,0,0,0,0,0,0,0,0
+P7221940,Glo,Yellow_LED_1,Yellow LED,First,Night,After,Zero,6,64,0,0,20,0,0,0,0,90,0,1,4,57,0,0,3,0,0,0,0,0,0
+P7221941,Glo,Yellow_LED_1,Yellow LED,First,Night,After,Zero,4,27,0,0,30,0,0,0,0,55,0,0,5,22,0,0,0,0,0,0,0,0,0
+P7221942,Glo,Yellow_LED_1,Yellow LED,First,Night,After,Zero,5,50,0,0,55,5,0,0,0,30,0,0,2,48,0,0,0,0,0,0,0,0,0
+P7221996,Ti,Yellow_LED_2,Yellow LED,First,Night,After,One,5,20,0,0,0,20,0,5,0,15,0,0,7,13,0,0,0,0,0,0,0,0,0
+P7221997,Ti,Yellow_LED_2,Yellow LED,First,Night,After,One,6,13,0,0,0,30,0,15,0,45,0,3,2,11,0,0,0,0,0,0,0,0,0
+P7221998,Ti,Yellow_LED_2,Yellow LED,First,Night,After,One,7,12,0,0,0,10,0,15,0,45,0,2,5,6,0,0,0,1,0,0,0,0,0
+P7221999,Ti,Yellow_LED_2,Yellow LED,First,Night,After,Two,6,14,0,0,0,25,0,5,0,20,0,4,6,8,0,0,0,0,0,0,0,0,0
+P7222000,Ti,Yellow_LED_2,Yellow LED,First,Night,After,Two,7,12,0,5,0,10,0,5,0,20,0,1,8,4,0,0,0,0,0,0,0,0,0
+P7222001,Ti,Yellow_LED_2,Yellow LED,First,Night,After,Two,8,10,0,20,0,20,0,10,0,30,0,4,3,6,0,0,0,0,0,1,0,0,0
+P7221995,Ti,Yellow_LED_2,Yellow LED,First,Night,After,Zero,4,15,0,0,0,35,0,0,0,5,0,0,6,9,0,0,0,0,0,0,0,0,0
+P7222002,Ti,Yellow_LED_2,Yellow LED,First,Night,After,Zero,5,4,0,30,0,0,0,5,0,5,0,5,4,0,0,0,0,0,0,0,0,0,0
+P7222003,Ti,Yellow_LED_2,Yellow LED,First,Night,After,Zero,7,13,0,15,0,40,0,5,0,35,0,2,5,8,0,0,0,0,0,0,0,0,0
+P7222004,Ti,Yellow_LED_2,Yellow LED,First,Night,After,Zero,8,16,0,10,0,45,0,10,0,40,0,5,2,11,3,0,0,0,0,0,0,0,0
+P7222089,ALAN,Control_1,Control,First,Day,NA,One,5,19,0,10,0,0,0,0,0,15,0,1,3,16,0,0,0,0,0,0,0,0,0
+P7222090,ALAN,Control_1,Control,First,Day,NA,One,5,27,0,25,0,0,0,0,0,0,0,1,6,17,0,0,4,0,0,0,0,0,0
+P7222091,ALAN,Control_1,Control,First,Day,NA,One,4,20,0,15,0,0,0,0,0,10,0,0,4,16,0,0,0,0,0,0,0,0,0
+P7222086,ALAN,Control_1,Control,First,Day,NA,Two,8,31,0,5,5,0,0,5,0,25,5,0,5,24,0,0,0,2,0,0,0,0,0
+P7222087,ALAN,Control_1,Control,First,Day,NA,Two,7,28,0,10,0,0,0,0,0,20,5,3,1,25,0,0,2,0,0,0,0,0,0
+P7222088,ALAN,Control_1,Control,First,Day,NA,Two,6,16,0,30,0,0,0,5,0,0,0,1,1,4,0,0,11,0,0,0,0,0,0
+P7222082,ALAN,Control_1,Control,First,Day,NA,Zero,6,12,0,35,0,0,0,20,0,0,0,2,2,3,0,0,7,0,0,0,0,0,0
+P7222083,ALAN,Control_1,Control,First,Day,NA,Zero,7,18,0,15,0,0,0,10,0,0,0,1,1,12,2,0,3,0,0,0,0,0,0
+P7222084,ALAN,Control_1,Control,First,Day,NA,Zero,6,21,0,25,0,0,0,5,0,0,0,3,1,7,0,0,13,0,0,0,0,0,0
+P7222085,ALAN,Control_1,Control,First,Day,NA,Zero,5,12,0,10,5,0,0,5,0,0,0,0,1,11,0,0,0,0,0,0,0,0,0
+P7222053,Syd,Control_2,Control,First,Day,NA,One,5,7,0,35,0,5,0,0,0,0,0,23,6,1,0,0,0,0,0,0,0,0,0
+P7222054,Syd,Control_2,Control,First,Day,NA,One,5,25,0,15,0,10,0,0,0,5,0,0,2,23,0,0,0,0,0,0,0,0,0
+P7222055,Syd,Control_2,Control,First,Day,NA,One,8,48,0,5,0,25,0,5,0,70,0,1,3,41,4,0,0,0,0,0,0,0,0
+P7222056,Syd,Control_2,Control,First,Day,NA,Two,6,17,0,30,0,10,0,0,0,5,0,2,9,8,0,0,0,0,0,0,0,0,0
+P7222057,Syd,Control_2,Control,First,Day,NA,Two,5,8,0,10,0,5,0,0,0,5,0,0,2,6,0,0,0,0,0,0,0,0,0
+P7222058,Syd,Control_2,Control,First,Day,NA,Two,7,19,0,35,5,10,0,5,0,0,0,2,8,11,0,0,0,0,0,0,0,0,0
+P7222049,Syd,Control_2,Control,First,Day,NA,Zero,5,12,0,20,5,10,0,0,0,0,0,0,5,7,0,0,0,0,0,0,0,0,0
+P7222050,Syd,Control_2,Control,First,Day,NA,Zero,7,9,0,15,0,10,0,0,0,5,0,1,5,2,2,0,0,0,0,0,0,0,0
+P7222051,Syd,Control_2,Control,First,Day,NA,Zero,6,19,0,15,0,5,0,0,0,5,0,0,3,5,11,0,0,0,0,0,0,0,0
+P7222052,Syd,Control_2,Control,First,Day,NA,Zero,8,38,0,10,0,20,0,5,0,30,0,2,7,28,3,0,0,0,0,0,0,0,0
+P7222069,Mac,Red_LED_1,Red LED,First,Day,NA,One,5,29,0,10,0,0,0,0,0,10,0,0,1,13,0,0,15,0,0,0,0,0,0
+P7222070,Mac,Red_LED_1,Red LED,First,Day,NA,One,4,24,0,15,0,0,0,0,0,0,0,0,4,7,0,0,13,0,0,0,0,0,0
+P7222071,Mac,Red_LED_1,Red LED,First,Day,NA,One,5,18,0,15,0,0,0,0,10,0,0,0,1,9,0,0,8,0,0,0,0,0,0
+P7222066,Mac,Red_LED_1,Red LED,First,Day,NA,Two,5,4,0,45,0,0,0,0,0,10,0,3,1,0,0,0,3,0,0,0,0,0,0
+P7222067,Mac,Red_LED_1,Red LED,First,Day,NA,Two,3,16,0,20,0,0,0,0,0,0,45,0,0,0,0,0,16,0,0,0,0,0,0
+P7222068,Mac,Red_LED_1,Red LED,First,Day,NA,Two,3,20,0,10,0,0,0,0,0,0,0,0,0,8,0,0,12,0,0,0,0,0,0
+P7222072,Mac,Red_LED_1,Red LED,First,Day,NA,Zero,7,20,0,15,5,0,0,5,0,5,0,0,3,4,0,0,13,0,0,0,0,0,0
+P7222073,Mac,Red_LED_1,Red LED,First,Day,NA,Zero,6,11,0,15,0,0,0,0,5,0,15,0,1,7,0,0,3,0,0,0,0,0,0
+P7222074,Mac,Red_LED_1,Red LED,First,Day,NA,Zero,4,11,0,5,0,0,0,0,0,30,0,0,0,9,0,0,2,0,0,0,0,0,0
+P7222075,Mac,Red_LED_1,Red LED,First,Day,NA,Zero,6,23,0,15,0,0,0,0,0,25,0,1,6,8,0,0,9,0,0,0,0,0,0
+P7222020,Marine,Red_LED_2,Red LED,First,Day,NA,One,3,8,0,0,0,10,0,0,0,0,0,0,2,6,0,0,0,0,0,0,0,0,0
+P7222021,Marine,Red_LED_2,Red LED,First,Day,NA,One,3,10,0,0,5,0,0,0,0,0,0,0,5,5,0,0,0,0,0,0,0,0,0
+P7222022,Marine,Red_LED_2,Red LED,First,Day,NA,One,4,11,0,0,5,0,0,0,0,5,0,0,9,2,0,0,0,0,0,0,0,0,0
+P7222023,Marine,Red_LED_2,Red LED,First,Day,NA,Two,3,5,0,0,15,0,0,0,0,0,0,0,2,3,0,0,0,0,0,0,0,0,0
+P7222024,Marine,Red_LED_2,Red LED,First,Day,NA,Two,4,3,0,0,20,0,0,0,0,5,0,1,0,3,0,0,0,0,0,0,0,0,0
+P7222025,Marine,Red_LED_2,Red LED,First,Day,NA,Two,4,7,0,0,5,0,0,0,0,0,0,7,5,2,0,0,0,0,0,0,0,0,0
+P7222016,Marine,Red_LED_2,Red LED,First,Day,NA,Zero,5,8,0,0,5,15,0,0,0,5,0,0,3,5,0,0,0,0,0,0,0,0,0
+P7222017,Marine,Red_LED_2,Red LED,First,Day,NA,Zero,6,7,0,0,5,15,0,5,0,25,0,0,3,4,0,0,0,0,0,0,0,0,0
+P7222018,Marine,Red_LED_2,Red LED,First,Day,NA,Zero,7,20,0,0,0,20,0,5,5,20,0,5,11,9,0,0,0,0,0,0,0,0,0
+P7222019,Marine,Red_LED_2,Red LED,First,Day,NA,Zero,7,8,0,0,5,20,0,5,0,20,0,3,6,2,0,0,0,0,0,0,0,0,0
+P7222102,Lumen,White_LED_2,White LED,First,Day,NA,One,2,21,0,0,0,0,0,0,0,0,0,0,7,14,0,0,0,0,0,0,0,0,0
+P7222103,Lumen,White_LED_2,White LED,First,Day,NA,One,6,55,0,0,5,0,0,0,0,30,0,1,6,44,5,0,0,0,0,0,0,0,0
+P7222104,Lumen,White_LED_2,White LED,First,Day,NA,One,6,66,0,0,5,0,0,5,0,35,0,2,0,53,13,0,0,0,0,0,0,0,0
+P7222105,Lumen,White_LED_2,White LED,First,Day,NA,Two,7,78,0,0,10,0,0,5,5,55,0,0,1,34,0,43,0,0,0,0,0,0,0
+P7222106,Lumen,White_LED_2,White LED,First,Day,NA,Two,6,53,0,0,5,0,0,5,0,45,0,0,0,23,7,23,0,0,0,0,0,0,0
+P7222107,Lumen,White_LED_2,White LED,First,Day,NA,Two,8,40,0,0,35,0,0,5,5,15,0,0,1,5,7,27,0,0,0,0,0,0,0
+P7222098,Lumen,White_LED_2,White LED,First,Day,NA,Zero,5,51,0,5,0,0,0,5,0,15,0,3,0,51,0,0,0,0,0,0,0,0,0
+P7222099,Lumen,White_LED_2,White LED,First,Day,NA,Zero,5,42,0,15,0,5,0,0,0,20,0,0,7,35,0,0,0,0,0,0,0,0,0
+P7222100,Lumen,White_LED_2,White LED,First,Day,NA,Zero,7,47,0,5,0,5,0,0,0,70,0,0,1,39,6,0,1,0,0,0,0,0,0
+P7222101,Lumen,White_LED_2,White LED,First,Day,NA,Zero,7,34,0,15,0,0,0,5,0,60,0,2,3,18,0,13,0,0,0,0,0,0,0
+P7222118,Glo,Yellow_LED_1,Yellow LED,First,Day,NA,One,6,79,0,0,0,15,0,0,0,35,0,8,2,41,36,0,0,0,0,0,0,0,0
+P7222119,Glo,Yellow_LED_1,Yellow LED,First,Day,NA,One,5,71,0,0,0,10,0,0,0,20,0,3,0,47,24,0,0,0,0,0,0,0,0
+P7222120,Glo,Yellow_LED_1,Yellow LED,First,Day,NA,One,5,69,0,0,5,10,0,0,0,15,0,0,0,55,14,0,0,0,0,0,0,0,0
+P7222121,Glo,Yellow_LED_1,Yellow LED,First,Day,NA,Two,6,53,0,5,5,5,0,0,0,15,0,0,0,52,0,0,1,0,0,0,0,0,0
+P7222122,Glo,Yellow_LED_1,Yellow LED,First,Day,NA,Two,5,64,0,0,5,0,0,0,15,10,0,6,0,64,0,0,0,0,0,0,0,0,0
+P7222123,Glo,Yellow_LED_1,Yellow LED,First,Day,NA,Two,7,26,0,5,10,0,0,0,0,10,5,3,2,24,0,0,0,0,0,0,0,0,0
+P7222114,Glo,Yellow_LED_1,Yellow LED,First,Day,NA,Zero,3,55,0,0,0,0,0,0,0,35,0,0,0,47,8,0,0,0,0,0,0,0,0
+P7222115,Glo,Yellow_LED_1,Yellow LED,First,Day,NA,Zero,4,54,0,0,0,5,0,0,0,25,0,0,2,52,0,0,0,0,0,0,0,0,0
+P7222116,Glo,Yellow_LED_1,Yellow LED,First,Day,NA,Zero,6,62,0,0,5,5,0,0,0,20,0,0,2,36,0,24,0,0,0,0,0,0,0
+P7222117,Glo,Yellow_LED_1,Yellow LED,First,Day,NA,Zero,4,72,0,0,0,10,0,0,0,30,0,0,0,37,0,35,0,0,0,0,0,0,0
+P7222036,Ti,Yellow_LED_2,Yellow LED,First,Day,NA,One,7,7,0,5,0,25,0,10,10,60,0,3,0,7,0,0,0,0,0,0,0,0,0
+P7222037,Ti,Yellow_LED_2,Yellow LED,First,Day,NA,One,7,4,0,5,0,25,0,5,0,20,0,3,2,2,0,0,0,0,0,0,0,0,0
+P7222041,Ti,Yellow_LED_2,Yellow LED,First,Day,NA,One,6,6,0,5,0,10,0,20,0,70,0,3,0,6,0,0,0,0,0,0,0,0,0
+P7222038,Ti,Yellow_LED_2,Yellow LED,First,Day,NA,Two,8,16,0,5,0,25,0,5,0,40,0,3,5,8,3,0,0,0,0,0,0,0,0
+P7222039,Ti,Yellow_LED_2,Yellow LED,First,Day,NA,Two,3,2,0,20,0,5,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0
+P7222040,Ti,Yellow_LED_2,Yellow LED,First,Day,NA,Two,5,15,0,0,0,25,0,0,0,10,0,1,7,8,0,0,0,0,0,0,0,0,0
+P7222033,Ti,Yellow_LED_2,Yellow LED,First,Day,NA,Zero,6,18,0,0,0,30,0,5,0,20,0,0,4,12,2,0,0,0,0,0,0,0,0
+P7222034,Ti,Yellow_LED_2,Yellow LED,First,Day,NA,Zero,6,6,0,35,0,5,0,0,0,5,0,4,5,0,0,0,1,0,0,0,0,0,0
+P7222035,Ti,Yellow_LED_2,Yellow LED,First,Day,NA,Zero,7,11,0,30,0,25,0,5,0,20,0,3,7,4,0,0,0,0,0,0,0,0,0
+P7222042,Ti,Yellow_LED_2,Yellow LED,First,Day,NA,Zero,7,10,0,10,0,15,0,15,0,70,0,3,6,4,0,0,0,0,0,0,0,0,0
+P7232178,ALAN,Control_1,Control,Second,Night,Before,One,7,30,0,20,0,0,0,0,0,20,5,4,4,11,0,0,15,0,0,0,0,0,0
+P7232179,ALAN,Control_1,Control,Second,Night,Before,One,4,23,0,20,0,0,0,0,0,0,0,0,14,7,0,0,2,0,0,0,0,0,0
+P7232180,ALAN,Control_1,Control,Second,Night,Before,One,7,34,0,30,0,0,0,0,0,0,0,2,2,21,0,0,8,0,0,1,2,0,0
+P7232181,ALAN,Control_1,Control,Second,Night,Before,Two,5,13,0,15,0,0,0,0,0,0,5,0,2,3,0,0,8,0,0,0,0,0,0
+P7232182,ALAN,Control_1,Control,Second,Night,Before,Two,6,16,0,45,0,0,0,0,0,10,0,0,4,3,0,0,7,0,0,0,2,0,0
+P7232183,ALAN,Control_1,Control,Second,Night,Before,Two,7,25,0,15,0,0,0,0,0,15,0,2,1,6,0,0,16,0,0,0,2,0,0
+P7232174,ALAN,Control_1,Control,Second,Night,Before,Zero,5,11,0,30,0,0,0,0,0,15,0,4,1,0,0,0,10,0,0,0,0,0,0
+P7232175,ALAN,Control_1,Control,Second,Night,Before,Zero,6,12,0,25,0,0,0,0,0,10,0,3,2,4,0,0,6,0,0,0,0,0,0
+P7232176,ALAN,Control_1,Control,Second,Night,Before,Zero,6,14,0,35,0,0,0,0,0,10,0,3,3,3,0,0,8,0,0,0,0,0,0
+P7232177,ALAN,Control_1,Control,Second,Night,Before,Zero,5,27,0,15,0,0,0,0,0,15,0,0,4,19,0,0,4,0,0,0,0,0,0
+P7232232,Syd,Control_2,Control,Second,Night,Before,One,7,44,0,0,0,20,0,5,0,15,0,2,5,29,0,10,0,0,0,0,0,0,0
+P7232233,Syd,Control_2,Control,Second,Night,Before,One,5,21,0,20,0,15,0,0,0,0,0,0,3,17,0,0,0,1,0,0,0,0,0
+P7232234,Syd,Control_2,Control,Second,Night,Before,One,5,11,0,35,0,10,0,0,0,0,0,23,6,5,0,0,0,0,0,0,0,0,0
+P7232235,Syd,Control_2,Control,Second,Night,Before,Two,5,18,0,10,5,0,0,0,0,5,0,0,4,14,0,0,0,0,0,0,0,0,0
+P7232236,Syd,Control_2,Control,Second,Night,Before,Two,5,11,0,10,0,5,0,0,0,0,0,0,4,5,0,0,2,0,0,0,0,0,0
+P7232237,Syd,Control_2,Control,Second,Night,Before,Two,5,16,0,20,0,0,0,0,0,0,0,1,1,10,0,0,5,0,0,0,0,0,0
+P7232228,Syd,Control_2,Control,Second,Night,Before,Zero,5,25,0,25,0,5,0,0,0,0,0,3,8,17,0,0,0,0,0,0,0,0,0
+P7232229,Syd,Control_2,Control,Second,Night,Before,Zero,6,17,0,10,5,15,0,0,0,0,0,1,6,11,0,0,0,0,0,0,0,0,0
+P7232230,Syd,Control_2,Control,Second,Night,Before,Zero,5,18,0,5,0,10,0,0,0,0,0,1,8,10,0,0,0,0,0,0,0,0,0
+P7232231,Syd,Control_2,Control,Second,Night,Before,Zero,5,19,0,20,0,15,0,0,0,0,0,3,5,14,0,0,0,0,0,0,0,0,0
+P7232213,Mac,Red_LED_1,Red LED,Second,Night,Before,One,3,5,0,5,0,0,0,0,0,20,0,0,0,0,0,0,5,0,0,0,0,0,0
+P7232214,Mac,Red_LED_1,Red LED,Second,Night,Before,One,5,21,0,5,0,0,0,0,0,10,0,0,3,17,0,0,0,0,0,0,0,0,1
+P7232215,Mac,Red_LED_1,Red LED,Second,Night,Before,One,8,31,0,15,20,0,0,0,0,0,5,0,6,6,0,0,16,2,0,1,0,0,0
+P7232216,Mac,Red_LED_1,Red LED,Second,Night,Before,Two,6,26,0,20,0,0,0,0,0,5,0,0,2,5,0,0,18,0,0,1,0,0,0
+P7232217,Mac,Red_LED_1,Red LED,Second,Night,Before,Two,7,19,0,15,5,0,0,0,0,0,10,0,2,8,0,0,8,0,0,1,0,0,0
+P7232218,Mac,Red_LED_1,Red LED,Second,Night,Before,Two,5,16,0,5,0,0,0,0,0,0,0,0,1,5,0,0,9,1,0,0,0,0,0
+P7232208,Mac,Red_LED_1,Red LED,Second,Night,Before,Zero,5,12,0,0,0,0,0,0,0,0,0,0,1,5,0,0,2,0,0,2,0,0,2
+P7232209,Mac,Red_LED_1,Red LED,Second,Night,Before,Zero,7,11,0,35,0,0,0,0,0,25,0,1,1,6,0,0,3,0,0,0,0,0,1
+P7232210,Mac,Red_LED_1,Red LED,Second,Night,Before,Zero,9,19,0,20,0,0,0,0,0,15,10,0,1,4,0,0,8,1,0,3,0,0,2
+P7232212,Mac,Red_LED_1,Red LED,Second,Night,Before,Zero,5,31,0,10,0,0,0,0,0,15,0,0,0,19,0,8,4,0,0,0,0,0,0
+iPhone5,Marine,Red_LED_2,Red LED,Second,Night,Before,One,6,11,0,10,0,15,0,5,0,20,0,0,7,4,0,0,0,0,0,0,0,0,0
+iPhone6,Marine,Red_LED_2,Red LED,Second,Night,Before,One,5,5,0,20,0,5,0,0,0,0,0,1,3,0,2,0,0,0,0,0,0,0,0
+iPhone7,Marine,Red_LED_2,Red LED,Second,Night,Before,One,7,7,0,5,0,20,0,5,0,40,0,0,1,4,2,0,0,0,0,0,0,0,0
+iPhone8,Marine,Red_LED_2,Red LED,Second,Night,Before,Two,7,11,0,0,0,25,0,15,0,20,0,0,2,4,4,0,0,1,0,0,0,0,0
+iPhone9,Marine,Red_LED_2,Red LED,Second,Night,Before,Two,8,18,0,10,0,25,0,15,0,20,0,0,0,7,8,0,0,2,0,1,0,0,0
+iPhone10,Marine,Red_LED_2,Red LED,Second,Night,Before,Two,9,8,0,10,0,20,0,25,0,15,0,3,2,2,3,0,0,1,0,0,0,0,0
+iPhone1,Marine,Red_LED_2,Red LED,Second,Night,Before,Zero,10,19,0,10,0,15,0,10,0,5,0,1,5,5,3,0,3,0,0,0,0,0,3
+iPhone2,Marine,Red_LED_2,Red LED,Second,Night,Before,Zero,7,13,0,15,0,35,0,5,0,25,0,6,4,9,0,0,0,0,0,0,0,0,0
+iPhone3,Marine,Red_LED_2,Red LED,Second,Night,Before,Zero,8,10,0,0,0,20,0,25,10,45,0,3,0,5,4,0,0,1,0,0,0,0,0
+iPhone4,Marine,Red_LED_2,Red LED,Second,Night,Before,Zero,9,10,0,0,0,10,0,20,5,15,0,2,1,3,4,0,0,2,0,0,0,0,0
+P7232134,Luxo,White_LED_1,White LED,Second,Night,Before,One,6,35,0,0,20,0,0,0,0,15,0,8,5,0,11,19,0,0,0,0,0,0,0
+P7232135,Luxo,White_LED_1,White LED,Second,Night,Before,One,5,13,0,0,0,0,0,5,0,15,0,0,0,0,10,0,2,0,0,1,0,0,0
+P7232136,Luxo,White_LED_1,White LED,Second,Night,Before,One,5,35,0,0,10,0,0,0,0,10,0,0,0,2,9,24,0,0,0,0,0,0,0
+P7232137,Luxo,White_LED_1,White LED,Second,Night,Before,Two,5,14,0,0,5,0,0,5,0,20,0,0,5,9,0,0,0,0,0,0,0,0,0
+P7232138,Luxo,White_LED_1,White LED,Second,Night,Before,Two,4,16,0,0,0,0,0,25,0,0,0,0,0,12,0,3,0,0,1,0,0,0,0
+P7232139,Luxo,White_LED_1,White LED,Second,Night,Before,Two,4,51,0,0,0,5,0,0,0,0,0,0,14,35,2,0,0,0,0,0,0,0,0
+P7232130,Luxo,White_LED_1,White LED,Second,Night,Before,Zero,6,34,0,0,0,0,0,0,0,5,0,2,0,2,7,23,0,0,0,2,0,0,0
+P7232131,Luxo,White_LED_1,White LED,Second,Night,Before,Zero,5,9,0,0,5,0,0,0,0,40,0,2,6,3,0,0,0,0,0,0,0,0,0
+P7232132,Luxo,White_LED_1,White LED,Second,Night,Before,Zero,3,43,0,0,0,0,0,0,0,0,0,1,0,0,11,32,0,0,0,0,0,0,0
+P7232133,Luxo,White_LED_1,White LED,Second,Night,Before,Zero,4,5,0,0,0,0,0,0,0,5,5,0,3,0,2,0,0,0,0,0,0,0,0
+P7232196,Lumen,White_LED_2,White LED,Second,Night,Before,One,4,22,0,15,0,0,0,0,0,10,0,0,4,18,0,0,0,0,0,0,0,0,0
+P7232197,Lumen,White_LED_2,White LED,Second,Night,Before,One,4,10,0,0,10,0,0,0,0,5,0,0,2,8,0,0,0,0,0,0,0,0,0
+P7232198,Lumen,White_LED_2,White LED,Second,Night,Before,One,7,85,0,0,15,5,0,5,0,15,0,1,0,53,0,32,0,0,0,0,0,0,0
+P7232199,Lumen,White_LED_2,White LED,Second,Night,Before,Two,5,71,0,0,0,5,0,0,0,20,0,1,0,46,0,25,0,0,0,0,0,0,0
+P7232200,Lumen,White_LED_2,White LED,Second,Night,Before,Two,7,64,0,5,15,0,0,5,0,15,0,0,4,29,0,31,0,0,0,0,0,0,0
+P7232201,Lumen,White_LED_2,White LED,Second,Night,Before,Two,5,78,0,0,15,5,0,0,0,20,0,0,0,33,0,45,0,0,0,0,0,0,0
+P7232192,Lumen,White_LED_2,White LED,Second,Night,Before,Zero,6,48,0,15,0,0,0,0,0,15,0,2,2,44,0,0,0,0,0,2,0,0,0
+P7232193,Lumen,White_LED_2,White LED,Second,Night,Before,Zero,8,33,0,25,0,0,0,0,0,5,0,1,6,24,0,0,0,1,0,1,1,0,0
+P7232194,Lumen,White_LED_2,White LED,Second,Night,Before,Zero,6,43,0,20,10,0,0,0,0,15,0,0,5,37,0,0,1,0,0,0,0,0,0
+P7232195,Lumen,White_LED_2,White LED,Second,Night,Before,Zero,5,17,0,0,30,0,0,5,0,15,0,0,1,16,0,0,0,0,0,0,0,0,0
+P7232153,Glo,Yellow_LED_1,Yellow LED,Second,Night,Before,One,4,75,0,0,30,5,0,5,0,0,0,0,0,75,0,0,0,0,0,0,0,0,0
+P7232154,Glo,Yellow_LED_1,Yellow LED,Second,Night,Before,One,7,95,0,0,15,10,0,0,0,15,0,2,1,92,0,0,0,0,0,2,0,0,0
+P7232155,Glo,Yellow_LED_1,Yellow LED,Second,Night,Before,One,5,89,0,0,20,5,0,0,0,5,0,0,2,87,0,0,0,0,0,0,0,0,0
+P7232165,Glo,Yellow_LED_1,Yellow LED,Second,Night,Before,Two,6,58,0,0,25,10,0,0,0,0,0,6,1,56,0,0,0,0,0,1,0,0,0
+P7232166,Glo,Yellow_LED_1,Yellow LED,Second,Night,Before,Two,5,47,0,0,20,0,0,0,0,10,0,1,0,45,0,0,0,0,0,2,0,0,0
+P7232167,Glo,Yellow_LED_1,Yellow LED,Second,Night,Before,Two,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+P7232149,Glo,Yellow_LED_1,Yellow LED,Second,Night,Before,Zero,3,42,0,0,5,0,0,0,0,15,0,0,0,42,0,0,0,0,0,0,0,0,0
+P7232150,Glo,Yellow_LED_1,Yellow LED,Second,Night,Before,Zero,3,18,0,0,30,0,0,0,0,0,0,0,3,15,0,0,0,0,0,0,0,0,0
+P7232151,Glo,Yellow_LED_1,Yellow LED,Second,Night,Before,Zero,3,31,0,0,65,0,0,0,0,0,0,0,2,29,0,0,0,0,0,0,0,0,0
+P7232152,Glo,Yellow_LED_1,Yellow LED,Second,Night,Before,Zero,4,38,0,0,40,0,0,0,0,5,0,0,2,36,0,0,0,0,0,0,0,0,0
+iPhone21,Ti,Yellow_LED_2,Yellow LED,Second,Night,Before,One,6,14,0,0,0,20,0,0,0,15,0,4,5,8,1,0,0,0,0,0,0,0,0
+iPhone22,Ti,Yellow_LED_2,Yellow LED,Second,Night,Before,One,4,5,0,0,5,0,0,0,0,0,0,2,2,3,0,0,0,0,0,0,0,0,0
+iPhone23,Ti,Yellow_LED_2,Yellow LED,Second,Night,Before,One,5,10,0,0,10,0,0,0,0,5,0,0,3,5,2,0,0,0,0,0,0,0,0
+iPhone24,Ti,Yellow_LED_2,Yellow LED,Second,Night,Before,Two,4,6,0,0,5,0,0,0,0,0,0,6,3,3,0,0,0,0,0,0,0,0,0
+iPhone25,Ti,Yellow_LED_2,Yellow LED,Second,Night,Before,Two,9,19,0,0,5,0,0,0,10,15,0,0,2,3,2,0,8,1,0,3,0,0,0
+iPhone26,Ti,Yellow_LED_2,Yellow LED,Second,Night,Before,Two,5,10,0,0,5,0,0,0,0,15,0,0,3,2,5,0,0,0,0,0,0,0,0
+iPhone17,Ti,Yellow_LED_2,Yellow LED,Second,Night,Before,Zero,6,13,0,0,5,20,0,0,0,10,0,1,6,7,0,0,0,0,0,0,0,0,0
+iPhone18,Ti,Yellow_LED_2,Yellow LED,Second,Night,Before,Zero,7,17,0,0,0,15,0,5,0,20,0,1,5,7,5,0,0,0,0,0,0,0,0
+iPhone19,Ti,Yellow_LED_2,Yellow LED,Second,Night,Before,Zero,7,8,0,0,0,5,0,5,0,15,0,2,3,4,0,0,1,0,0,0,0,0,0
+iPhone20,Ti,Yellow_LED_2,Yellow LED,Second,Night,Before,Zero,5,10,0,0,5,0,0,0,0,15,0,0,2,5,3,0,0,0,0,0,0,0,0
+IMG_2845,ALAN,Control_1,Control,Second,Night,After,One,6,17,0,20,0,0,0,0,0,15,0,1,3,0,1,0,13,0,0,0,0,0,0
+IMG_2846,ALAN,Control_1,Control,Second,Night,After,One,4,17,0,15,0,0,0,0,0,0,0,0,2,11,0,0,4,0,0,0,0,0,0
+IMG_2847,ALAN,Control_1,Control,Second,Night,After,One,8,75,0,5,0,5,0,0,10,10,0,3,0,49,23,0,3,0,0,0,0,0,0
+IMG_2848,ALAN,Control_1,Control,Second,Night,After,Two,6,14,0,20,0,0,0,0,0,0,0,0,3,3,0,0,6,1,0,1,0,0,0
+IMG_2849,ALAN,Control_1,Control,Second,Night,After,Two,8,15,0,20,0,0,0,5,0,45,5,1,1,0,11,0,3,0,0,0,0,0,0
+IMG_2850,ALAN,Control_1,Control,Second,Night,After,Two,8,50,0,15,15,0,0,5,0,75,0,0,1,16,27,0,6,0,0,0,0,0,0
+IMG_2851,ALAN,Control_1,Control,Second,Night,After,Two,8,20,0,35,0,0,0,0,0,25,0,2,2,7,5,0,5,1,0,0,0,0,0
+IMG_2842,ALAN,Control_1,Control,Second,Night,After,Zero,6,13,0,20,0,0,0,0,0,15,0,1,1,3,0,0,9,0,0,0,0,0,0
+IMG_2843,ALAN,Control_1,Control,Second,Night,After,Zero,2,6,0,0,0,0,0,0,0,0,0,3,0,0,6,0,0,0,0,0,0,0,0
+IMG_2844,ALAN,Control_1,Control,Second,Night,After,Zero,5,9,0,20,0,0,0,0,0,15,0,0,3,0,2,0,4,0,0,0,0,0,0
+IMG_2880,Syd,Control_2,Control,Second,Night,After,One,7,10,0,10,0,5,0,0,0,0,0,0,2,1,5,0,0,1,0,1,0,0,0
+IMG_2881,Syd,Control_2,Control,Second,Night,After,One,6,20,0,15,0,10,0,0,0,10,0,0,9,0,8,3,0,0,0,0,0,0,0
+IMG_2882,Syd,Control_2,Control,Second,Night,After,One,7,32,0,20,0,15,0,0,0,15,0,4,3,3,26,0,0,0,0,0,0,0,0
+IMG_2883,Syd,Control_2,Control,Second,Night,After,Two,5,10,0,30,0,15,0,0,0,0,0,11,4,0,6,0,0,0,0,0,0,0,0
+IMG_2884,Syd,Control_2,Control,Second,Night,After,Two,7,47,0,15,0,15,0,0,0,15,0,1,1,0,37,9,0,0,0,0,0,0,0
+IMG_2885,Syd,Control_2,Control,Second,Night,After,Two,8,14,0,25,0,5,0,0,0,15,0,3,3,2,5,4,0,0,0,0,0,0,0
+IMG_2876,Syd,Control_2,Control,Second,Night,After,Zero,6,13,0,15,5,15,0,0,0,0,0,0,4,3,6,0,0,0,0,0,0,0,0
+IMG_2877,Syd,Control_2,Control,Second,Night,After,Zero,5,9,0,20,0,10,0,0,0,0,0,0,4,2,3,0,0,0,0,0,0,0,0
+IMG_2878,Syd,Control_2,Control,Second,Night,After,Zero,4,19,0,15,0,0,0,0,0,0,0,0,4,5,10,0,0,0,0,0,0,0,0
+IMG_2879,Syd,Control_2,Control,Second,Night,After,Zero,6,21,0,25,0,10,0,0,0,0,0,2,4,3,14,0,0,0,0,0,0,0,0
+IMG_2863,Mac,Red_LED_1,Red LED,Second,Night,After,One,4,18,0,0,0,0,0,0,0,30,0,0,0,10,6,2,0,0,0,0,0,0,0
+IMG_2864,Mac,Red_LED_1,Red LED,Second,Night,After,One,9,33,0,5,0,0,0,0,0,15,15,1,2,3,3,0,24,0,0,1,0,0,0
+IMG_2865,Mac,Red_LED_1,Red LED,Second,Night,After,One,7,15,0,20,0,0,0,0,0,40,0,0,3,2,2,0,7,0,0,1,0,0,0
+IMG_2866,Mac,Red_LED_1,Red LED,Second,Night,After,Two,6,13,0,15,0,0,0,0,0,10,0,0,6,2,0,0,3,0,0,2,0,0,0
+IMG_2867,Mac,Red_LED_1,Red LED,Second,Night,After,Two,5,32,0,15,0,0,0,0,0,30,0,0,0,3,8,0,21,0,0,0,0,0,0
+IMG_2868,Mac,Red_LED_1,Red LED,Second,Night,After,Two,5,40,0,10,0,0,0,0,0,0,0,0,0,13,9,11,7,0,0,0,0,0,0
+IMG_2859,Mac,Red_LED_1,Red LED,Second,Night,After,Zero,8,30,0,20,0,0,0,0,0,15,0,3,3,2,6,12,7,0,0,0,0,0,0
+IMG_2860,Mac,Red_LED_1,Red LED,Second,Night,After,Zero,4,9,0,15,0,0,0,0,0,30,0,0,0,6,0,0,3,0,0,0,0,0,0
+IMG_2861,Mac,Red_LED_1,Red LED,Second,Night,After,Zero,6,27,0,15,0,0,0,0,0,10,0,0,0,2,1,0,22,0,0,0,0,0,2
+IMG_2862,Mac,Red_LED_1,Red LED,Second,Night,After,Zero,5,9,0,20,0,0,0,0,0,15,0,1,0,0,0,0,8,0,0,1,0,0,0
+IMG_2912,Marine,Red_LED_2,Red LED,Second,Night,After,One,6,20,0,0,0,20,0,0,0,20,0,1,7,8,5,0,0,0,0,0,0,0,0
+IMG_2916,Marine,Red_LED_2,Red LED,Second,Night,After,One,4,17,0,0,5,0,0,0,0,0,0,2,6,11,0,0,0,0,0,0,0,0,0
+IMG_2917,Marine,Red_LED_2,Red LED,Second,Night,After,One,4,18,0,0,5,0,0,0,0,0,0,0,3,12,3,0,0,0,0,0,0,0,0
+IMG_2913,Marine,Red_LED_2,Red LED,Second,Night,After,Two,6,10,0,0,5,0,0,5,0,30,0,1,3,7,0,0,0,0,0,0,0,0,0
+IMG_2914,Marine,Red_LED_2,Red LED,Second,Night,After,Two,6,17,0,0,5,10,0,0,0,0,0,1,5,10,2,0,0,0,0,0,0,0,0
+IMG_2915,Marine,Red_LED_2,Red LED,Second,Night,After,Two,6,8,0,0,0,10,0,0,0,20,0,2,4,3,1,0,0,0,0,0,0,0,0
+IMG_2910,Marine,Red_LED_2,Red LED,Second,Night,After,Zero,4,7,0,0,0,15,0,0,0,15,0,0,3,4,0,0,0,0,0,0,0,0,0
+IMG_2911,Marine,Red_LED_2,Red LED,Second,Night,After,Zero,4,9,0,0,0,5,0,0,0,10,0,0,4,5,0,0,0,0,0,0,0,0,0
+IMG_2918,Marine,Red_LED_2,Red LED,Second,Night,After,Zero,4,9,0,0,20,0,0,0,0,0,0,2,5,4,0,0,0,0,0,0,0,0,0
+IMG_2919,Marine,Red_LED_2,Red LED,Second,Night,After,Zero,4,10,0,0,10,0,0,0,0,0,0,0,1,4,0,0,5,0,0,0,0,0,0
+IMG_2795,Luxo,White_LED_1,White LED,Second,Night,After,One,4,40,0,0,0,0,0,35,0,30,0,0,0,0,15,25,0,0,0,0,0,0,0
+IMG_2796,Luxo,White_LED_1,White LED,Second,Night,After,One,6,80,0,0,0,0,0,15,0,20,0,1,4,0,54,22,0,0,0,0,0,0,0
+IMG_2797,Luxo,White_LED_1,White LED,Second,Night,After,One,5,83,0,0,0,0,0,5,0,20,0,0,6,0,35,42,0,0,0,0,0,0,0
+IMG_2798,Luxo,White_LED_1,White LED,Second,Night,After,Two,7,21,0,0,0,0,0,5,0,15,5,0,3,0,7,10,0,0,0,1,0,0,0
+IMG_2799,Luxo,White_LED_1,White LED,Second,Night,After,Two,6,16,0,0,10,0,0,5,0,20,0,6,3,0,13,0,0,0,0,0,0,0,0
+IMG_2800,Luxo,White_LED_1,White LED,Second,Night,After,Two,6,48,0,0,10,0,0,0,0,5,0,1,0,0,12,35,1,0,0,0,0,0,0
+IMG_2791,Luxo,White_LED_1,White LED,Second,Night,After,Zero,5,23,0,0,0,0,0,0,0,40,0,1,0,3,4,16,0,0,0,0,0,0,0
+IMG_2792,Luxo,White_LED_1,White LED,Second,Night,After,Zero,5,24,0,0,0,0,0,10,0,25,0,0,5,0,11,8,0,0,0,0,0,0,0
+IMG_2793,Luxo,White_LED_1,White LED,Second,Night,After,Zero,5,41,0,0,0,0,0,10,0,15,0,1,0,0,9,32,0,0,0,0,0,0,0
+IMG_2794,Luxo,White_LED_1,White LED,Second,Night,After,Zero,1,0,0,0,0,0,0,0,0,25,0,0,0,0,0,0,0,0,0,0,0,0,0
+IMG_2829,Lumen,White_LED_2,White LED,Second,Night,After,One,7,95,0,0,15,5,0,10,0,10,0,0,3,57,35,0,0,0,0,0,0,0,0
+IMG_2830,Lumen,White_LED_2,White LED,Second,Night,After,One,6,114,0,0,20,0,0,10,0,25,0,0,1,27,0,86,0,0,0,0,0,0,0
+IMG_2831,Lumen,White_LED_2,White LED,Second,Night,After,One,4,41,0,0,5,0,0,0,0,0,0,0,5,0,8,28,0,0,0,0,0,0,0
+IMG_2832,Lumen,White_LED_2,White LED,Second,Night,After,Two,10,65,0,20,10,0,0,5,0,15,0,2,5,14,0,43,2,0,0,1,0,0,0
+IMG_2833,Lumen,White_LED_2,White LED,Second,Night,After,Two,7,82,0,0,0,10,0,0,0,10,0,0,3,43,12,22,0,0,0,0,0,0,2
+IMG_2834,Lumen,White_LED_2,White LED,Second,Night,After,Two,6,82,0,0,15,10,0,0,0,15,0,0,0,35,25,22,0,0,0,0,0,0,0
+IMG_2825,Lumen,White_LED_2,White LED,Second,Night,After,Zero,8,28,0,15,0,5,0,5,0,10,0,0,2,9,15,0,2,0,0,0,0,0,0
+IMG_2826,Lumen,White_LED_2,White LED,Second,Night,After,Zero,9,47,0,10,5,10,0,5,0,5,0,0,2,28,6,11,0,0,0,0,0,0,0
+IMG_2827,Lumen,White_LED_2,White LED,Second,Night,After,Zero,9,36,0,25,0,0,0,5,0,10,0,2,2,18,2,13,1,0,0,0,0,0,0
+IMG_2828,Lumen,White_LED_2,White LED,Second,Night,After,Zero,7,24,0,20,0,5,0,0,0,20,0,4,0,8,9,7,0,0,0,0,0,0,0
+IMG_2812,Glo,Yellow_LED_1,Yellow LED,Second,Night,After,One,7,97,0,0,30,0,0,0,0,10,0,1,3,72,13,9,0,0,0,0,0,0,0
+IMG_2813,Glo,Yellow_LED_1,Yellow LED,Second,Night,After,One,7,105,0,0,0,10,0,5,0,10,0,1,0,19,64,22,0,0,0,0,0,0,0
+IMG_2814,Glo,Yellow_LED_1,Yellow LED,Second,Night,After,One,5,110,0,0,0,10,0,0,0,15,0,0,0,53,25,32,0,0,0,0,0,0,0
+IMG_2815,Glo,Yellow_LED_1,Yellow LED,Second,Night,After,Two,7,59,0,0,20,5,0,0,0,10,10,0,1,49,9,0,0,0,0,0,0,0,0
+IMG_2816,Glo,Yellow_LED_1,Yellow LED,Second,Night,After,Two,6,92,0,0,15,5,0,0,0,15,0,0,2,52,0,38,0,0,0,0,0,0,0
+IMG_2817,Glo,Yellow_LED_1,Yellow LED,Second,Night,After,Two,5,30,0,0,15,0,0,0,0,0,20,0,0,24,4,0,0,0,0,2,0,0,0
+IMG_2808,Glo,Yellow_LED_1,Yellow LED,Second,Night,After,Zero,7,66,0,0,10,0,0,0,0,10,0,1,0,13,42,9,2,0,0,0,0,0,0
+IMG_2809,Glo,Yellow_LED_1,Yellow LED,Second,Night,After,Zero,8,25,0,0,20,0,0,5,0,15,0,1,1,0,16,6,2,0,0,0,0,0,0
+IMG_2810,Glo,Yellow_LED_1,Yellow LED,Second,Night,After,Zero,6,55,0,0,30,10,0,0,0,25,0,0,0,0,32,22,1,0,0,0,0,0,0
+IMG_2811,Glo,Yellow_LED_1,Yellow LED,Second,Night,After,Zero,6,120,0,0,20,10,0,0,0,20,0,0,0,4,104,12,0,0,0,0,0,0,0
+IMG_2895,Ti,Yellow_LED_2,Yellow LED,Second,Night,After,One,8,10,0,15,0,35,0,10,0,20,0,1,3,2,5,0,0,0,0,0,0,0,0
+IMG_2896,Ti,Yellow_LED_2,Yellow LED,Second,Night,After,One,8,10,0,5,0,35,0,15,0,20,0,3,5,2,3,0,0,0,0,0,0,0,0
+IMG_2900,Ti,Yellow_LED_2,Yellow LED,Second,Night,After,One,7,7,0,5,0,35,0,5,0,20,0,0,1,3,3,0,0,0,0,0,0,0,0
+IMG_2897,Ti,Yellow_LED_2,Yellow LED,Second,Night,After,Two,6,5,0,20,0,20,0,5,0,15,0,0,2,3,0,0,0,0,0,0,0,0,0
+IMG_2898,Ti,Yellow_LED_2,Yellow LED,Second,Night,After,Two,8,8,0,15,0,5,0,20,0,15,0,2,1,3,4,0,0,0,0,0,0,0,0
+IMG_2899,Ti,Yellow_LED_2,Yellow LED,Second,Night,After,Two,8,18,0,5,0,15,0,5,0,20,0,1,7,6,5,0,0,0,0,0,0,0,0
+IMG_2893,Ti,Yellow_LED_2,Yellow LED,Second,Night,After,Zero,9,8,0,15,0,35,0,10,0,30,0,2,4,1,2,0,0,1,0,0,0,0,0
+IMG_2894,Ti,Yellow_LED_2,Yellow LED,Second,Night,After,Zero,7,8,0,30,0,15,0,10,0,55,0,0,2,5,0,0,0,0,0,0,0,0,1
+IMG_2901,Ti,Yellow_LED_2,Yellow LED,Second,Night,After,Zero,7,8,0,10,0,15,0,5,0,25,0,2,6,2,0,0,0,0,0,0,0,0,0
+IMG_2902,Ti,Yellow_LED_2,Yellow LED,Second,Night,After,Zero,6,11,0,0,0,20,0,20,0,40,0,0,0,6,3,0,0,2,0,0,0,0,0
+P7232303,ALAN,Control_1,Control,Second,Day,NA,One,4,36,0,0,0,0,0,0,20,15,5,0,0,36,0,0,0,0,0,0,0,0,0
+P7232304,ALAN,Control_1,Control,Second,Day,NA,One,5,43,0,5,0,0,0,0,5,15,0,0,1,42,0,0,0,0,0,0,0,0,0
+P7232305,ALAN,Control_1,Control,Second,Day,NA,One,5,5,0,15,0,0,0,0,0,15,0,0,1,3,0,0,1,0,0,0,0,0,0
+P7232300,ALAN,Control_1,Control,Second,Day,NA,Two,5,10,0,25,0,0,0,0,0,15,0,1,6,4,0,0,0,0,0,0,0,0,0
+P7232301,ALAN,Control_1,Control,Second,Day,NA,Two,6,19,0,20,0,0,0,0,0,15,0,2,11,3,0,0,5,0,0,0,0,0,0
+P7232302,ALAN,Control_1,Control,Second,Day,NA,Two,5,24,0,20,0,0,0,0,0,10,0,2,3,21,0,0,0,0,0,0,0,0,0
+P7232297,ALAN,Control_1,Control,Second,Day,NA,Zero,6,13,0,20,0,0,0,5,0,10,0,0,1,9,0,0,3,0,0,0,0,0,0
+P7232298,ALAN,Control_1,Control,Second,Day,NA,Zero,5,8,0,30,0,0,0,0,0,0,0,1,3,3,0,0,2,0,0,0,0,0,0
+P7232299,ALAN,Control_1,Control,Second,Day,NA,Zero,6,13,0,35,0,0,0,5,0,0,0,3,3,6,0,0,4,0,0,0,0,0,0
+P7232334,Syd,Control_2,Control,Second,Day,NA,One,6,17,0,25,0,15,0,0,0,10,0,3,6,11,0,0,0,0,0,0,0,0,0
+P7232335,Syd,Control_2,Control,Second,Day,NA,One,7,33,0,10,0,15,0,0,10,20,0,1,3,30,0,0,0,0,0,0,0,0,0
+P7232336,Syd,Control_2,Control,Second,Day,NA,One,4,17,0,0,0,5,0,0,0,5,0,0,5,12,0,0,0,0,0,0,0,0,0
+P7232337,Syd,Control_2,Control,Second,Day,NA,Two,6,10,0,45,0,20,0,0,0,10,0,2,6,4,0,0,0,0,0,0,0,0,0
+P7232338,Syd,Control_2,Control,Second,Day,NA,Two,5,27,0,0,0,35,0,0,0,40,0,1,3,24,0,0,0,0,0,0,0,0,0
+P7232339,Syd,Control_2,Control,Second,Day,NA,Two,5,13,0,20,0,10,0,0,0,15,0,0,7,6,0,0,0,0,0,0,0,0,0
+P7232330,Syd,Control_2,Control,Second,Day,NA,Zero,4,8,0,15,0,5,0,0,0,0,0,0,3,5,0,0,0,0,0,0,0,0,0
+P7232331,Syd,Control_2,Control,Second,Day,NA,Zero,5,10,0,25,0,10,0,0,0,0,0,2,6,4,0,0,0,0,0,0,0,0,0
+P7232332,Syd,Control_2,Control,Second,Day,NA,Zero,6,11,0,45,0,15,0,5,0,0,0,8,5,6,0,0,0,0,0,0,0,0,0
+P7232333,Syd,Control_2,Control,Second,Day,NA,Zero,7,25,0,35,0,15,0,5,0,10,0,1,5,20,0,0,0,0,0,0,0,0,0
+P7232317,Mac,Red_LED_1,Red LED,Second,Day,NA,One,3,11,0,5,0,0,0,0,0,0,0,0,9,0,0,0,2,0,0,0,0,0,0
+P7232318,Mac,Red_LED_1,Red LED,Second,Day,NA,One,4,14,0,20,0,0,0,0,0,0,10,0,0,4,0,0,10,0,0,0,0,0,0
+P7232319,Mac,Red_LED_1,Red LED,Second,Day,NA,One,5,8,0,25,0,0,0,0,10,0,0,0,1,4,0,0,3,0,0,0,0,0,0
+P7232320,Mac,Red_LED_1,Red LED,Second,Day,NA,Two,5,41,0,15,0,0,0,0,0,20,0,0,1,21,0,0,19,0,0,0,0,0,0
+P7232321,Mac,Red_LED_1,Red LED,Second,Day,NA,Two,3,24,0,5,0,0,0,0,0,0,0,0,0,13,0,0,11,0,0,0,0,0,0
+P7232322,Mac,Red_LED_1,Red LED,Second,Day,NA,Two,5,15,0,20,0,0,0,0,0,20,0,0,2,0,0,0,11,0,0,2,0,0,0
+P7232313,Mac,Red_LED_1,Red LED,Second,Day,NA,Zero,6,9,0,10,0,0,0,0,0,0,0,1,1,4,0,0,0,1,0,3,0,0,0
+P7232314,Mac,Red_LED_1,Red LED,Second,Day,NA,Zero,7,12,0,15,0,0,0,10,0,10,0,1,1,9,0,0,2,0,0,0,0,0,0
+P7232315,Mac,Red_LED_1,Red LED,Second,Day,NA,Zero,5,13,0,20,0,0,0,0,5,0,0,1,1,12,0,0,0,0,0,0,0,0,0
+P7232316,Mac,Red_LED_1,Red LED,Second,Day,NA,Zero,6,11,0,15,0,0,0,0,0,15,0,1,2,3,0,0,6,0,0,0,0,0,0
+P7232366,Marine,Red_LED_2,Red LED,Second,Day,NA,One,5,6,0,0,5,0,0,0,0,70,0,2,5,0,0,0,1,0,0,0,0,0,0
+P7232367,Marine,Red_LED_2,Red LED,Second,Day,NA,One,4,7,0,0,15,0,0,5,0,0,0,0,6,0,0,0,1,0,0,0,0,0,0
+P7232370,Marine,Red_LED_2,Red LED,Second,Day,NA,One,4,6,0,0,10,5,0,0,0,0,0,4,6,0,0,0,0,0,0,0,0,0,0
+P7232368,Marine,Red_LED_2,Red LED,Second,Day,NA,Two,4,10,0,0,5,0,0,0,0,0,0,1,5,5,0,0,0,0,0,0,0,0,0
+P7232369,Marine,Red_LED_2,Red LED,Second,Day,NA,Two,4,11,0,0,10,0,0,0,0,5,0,1,11,0,0,0,0,0,0,0,0,0,0
+P7232371,Marine,Red_LED_2,Red LED,Second,Day,NA,Two,5,16,0,0,0,15,0,5,0,20,0,0,4,12,0,0,0,0,0,0,0,0,0
+P7232364,Marine,Red_LED_2,Red LED,Second,Day,NA,Zero,5,10,0,0,5,10,0,0,0,20,0,0,6,4,0,0,0,0,0,0,0,0,0
+P7232365,Marine,Red_LED_2,Red LED,Second,Day,NA,Zero,7,5,0,0,0,10,0,5,15,10,0,2,1,4,0,0,0,0,0,0,0,0,0
+P7232372,Marine,Red_LED_2,Red LED,Second,Day,NA,Zero,6,13,0,0,0,15,0,0,0,20,0,1,3,7,3,0,0,0,0,0,0,0,0
+P7232373,Marine,Red_LED_2,Red LED,Second,Day,NA,Zero,7,16,0,0,0,15,0,10,0,40,0,1,7,5,4,0,0,0,0,0,0,0,0
+P7232249,Luxo,White_LED_1,White LED,Second,Day,NA,One,2,6,0,0,0,0,0,0,0,35,0,0,0,6,0,0,0,0,0,0,0,0,0
+P7232250,Luxo,White_LED_1,White LED,Second,Day,NA,One,5,67,0,0,0,0,0,5,0,75,0,3,0,12,0,55,0,0,0,0,0,0,0
+P7232251,Luxo,White_LED_1,White LED,Second,Day,NA,One,6,19,0,0,25,0,0,5,0,45,0,12,2,17,0,0,0,0,0,0,0,0,0
+P7232252,Luxo,White_LED_1,White LED,Second,Day,NA,Two,6,11,5,0,0,0,0,10,0,20,25,0,3,8,0,0,0,0,0,0,0,0,0
+P7232253,Luxo,White_LED_1,White LED,Second,Day,NA,Two,5,8,0,0,0,0,0,5,0,45,0,13,2,6,0,0,0,0,0,0,0,0,0
+P7232245,Luxo,White_LED_1,White LED,Second,Day,NA,Zero,4,37,0,0,0,0,0,0,0,95,0,1,0,14,0,23,0,0,0,0,0,0,0
+P7232246,Luxo,White_LED_1,White LED,Second,Day,NA,Zero,4,72,0,0,5,0,0,0,0,85,0,0,0,26,0,46,0,0,0,0,0,0,0
+P7232247,Luxo,White_LED_1,White LED,Second,Day,NA,Zero,4,13,0,0,0,0,0,10,0,35,0,0,7,6,0,0,0,0,0,0,0,0,0
+P7232248,Luxo,White_LED_1,White LED,Second,Day,NA,Zero,3,19,0,0,0,0,0,15,0,85,0,0,0,19,0,0,0,0,0,0,0,0,0
+P7232283,Lumen,White_LED_2,White LED,Second,Day,NA,One,5,14,0,30,5,0,0,0,0,0,0,1,10,4,0,0,0,0,0,0,0,0,0
+P7232284,Lumen,White_LED_2,White LED,Second,Day,NA,One,6,29,0,0,20,0,0,0,5,20,0,4,0,3,0,26,0,0,0,0,0,0,0
+P7232285,Lumen,White_LED_2,White LED,Second,Day,NA,One,5,32,0,0,0,5,0,10,0,15,0,1,0,32,0,0,0,0,0,0,0,0,0
+P7232286,Lumen,White_LED_2,White LED,Second,Day,NA,Two,5,20,0,10,5,0,0,0,0,10,0,0,4,16,0,0,0,0,0,0,0,0,0
+P7232287,Lumen,White_LED_2,White LED,Second,Day,NA,Two,6,35,0,5,5,10,0,5,0,10,0,0,0,35,0,0,0,0,0,0,0,0,0
+P7232288,Lumen,White_LED_2,White LED,Second,Day,NA,Two,5,19,0,0,20,5,0,0,0,30,0,0,1,18,0,0,0,0,0,0,0,0,0
+P7232279,Lumen,White_LED_2,White LED,Second,Day,NA,Zero,5,37,0,15,0,0,0,5,0,25,0,2,0,37,0,0,0,0,0,0,0,0,0
+P7232280,Lumen,White_LED_2,White LED,Second,Day,NA,Zero,6,33,0,20,0,10,0,5,0,15,0,0,4,29,0,0,0,0,0,0,0,0,0
+P7232281,Lumen,White_LED_2,White LED,Second,Day,NA,Zero,5,35,0,20,0,5,0,10,0,25,0,0,0,35,0,0,0,0,0,0,0,0,0
+P7232282,Lumen,White_LED_2,White LED,Second,Day,NA,Zero,6,28,0,15,0,5,0,0,0,10,0,2,2,26,0,0,0,0,0,0,0,0,0
+P7232265,Glo,Yellow_LED_1,Yellow LED,Second,Day,NA,One,5,65,0,0,10,0,0,0,5,15,0,2,0,65,0,0,0,0,0,0,0,0,0
+P7232266,Glo,Yellow_LED_1,Yellow LED,Second,Day,NA,One,5,25,0,0,20,0,0,0,5,10,0,5,0,25,0,0,0,0,0,0,0,0,0
+P7232267,Glo,Yellow_LED_1,Yellow LED,Second,Day,NA,One,3,75,0,0,0,5,0,0,0,20,0,0,0,75,0,0,0,0,0,0,0,0,0
+P7232262,Glo,Yellow_LED_1,Yellow LED,Second,Day,NA,Two,4,65,0,0,0,0,0,0,0,35,0,1,41,24,0,0,0,0,0,0,0,0,0
+P7232263,Glo,Yellow_LED_1,Yellow LED,Second,Day,NA,Two,5,22,0,0,20,0,0,0,0,15,0,0,1,17,0,0,4,0,0,0,0,0,0
+P7232264,Glo,Yellow_LED_1,Yellow LED,Second,Day,NA,Two,6,71,0,0,15,5,0,0,0,25,0,0,1,56,0,14,0,0,0,0,0,0,0
+P7232268,Glo,Yellow_LED_1,Yellow LED,Second,Day,NA,Zero,6,83,0,0,20,15,0,0,15,20,0,0,1,82,0,0,0,0,0,0,0,0,0
+P7232269,Glo,Yellow_LED_1,Yellow LED,Second,Day,NA,Zero,4,14,0,0,0,0,0,0,5,0,10,2,0,14,0,0,0,0,0,0,0,0,0
+P7232270,Glo,Yellow_LED_1,Yellow LED,Second,Day,NA,Zero,4,47,0,0,10,15,0,0,0,10,0,0,0,47,0,0,0,0,0,0,0,0,0
+P7232271,Glo,Yellow_LED_1,Yellow LED,Second,Day,NA,Zero,6,43,0,0,10,5,0,0,15,15,0,0,1,42,0,0,0,0,0,0,0,0,0
+P7232351,Ti,Yellow_LED_2,Yellow LED,Second,Day,NA,One,5,14,0,0,0,40,0,15,0,40,0,0,8,6,0,0,0,0,0,0,0,0,0
+P7232352,Ti,Yellow_LED_2,Yellow LED,Second,Day,NA,One,4,7,0,35,0,0,0,0,0,20,0,0,3,4,0,0,0,0,0,0,0,0,0
+P7232353,Ti,Yellow_LED_2,Yellow LED,Second,Day,NA,One,4,9,0,0,0,25,0,0,0,20,0,0,5,4,0,0,0,0,0,0,0,0,0
+P7232354,Ti,Yellow_LED_2,Yellow LED,Second,Day,NA,Two,6,9,0,5,0,5,0,15,0,75,0,0,2,7,0,0,0,0,0,0,0,0,0
+P7232355,Ti,Yellow_LED_2,Yellow LED,Second,Day,NA,Two,6,7,0,0,0,20,0,25,0,30,0,4,4,3,0,0,0,0,0,0,0,0,0
+P7232356,Ti,Yellow_LED_2,Yellow LED,Second,Day,NA,Two,7,8,0,10,0,20,0,15,0,20,0,2,3,5,0,0,0,0,0,0,0,0,0
+P7232347,Ti,Yellow_LED_2,Yellow LED,Second,Day,NA,Zero,7,9,0,25,0,30,0,5,0,15,0,3,3,6,0,0,0,0,0,0,0,0,0
+P7232348,Ti,Yellow_LED_2,Yellow LED,Second,Day,NA,Zero,6,7,0,0,0,20,0,10,0,20,0,1,3,4,0,0,0,0,0,0,0,0,0
+P7232349,Ti,Yellow_LED_2,Yellow LED,Second,Day,NA,Zero,6,6,0,20,0,40,0,15,0,45,0,0,1,5,0,0,0,0,0,0,0,0,0
+P7232350,Ti,Yellow_LED_2,Yellow LED,Second,Day,NA,Zero,7,11,0,0,0,30,0,25,0,30,0,3,1,7,0,0,3,0,0,0,0,0,0
+P7242443,ALAN,Control_1,Control,Third,Night,Before,One,7,21,0,35,0,0,0,0,0,15,0,3,4,0,2,0,14,0,0,0,1,0,0
+P7242444,ALAN,Control_1,Control,Third,Night,Before,One,6,13,0,10,0,0,0,0,5,15,15,0,0,0,11,0,0,2,0,0,0,0,0
+P7242445,ALAN,Control_1,Control,Third,Night,Before,One,8,25,0,15,0,0,0,0,5,10,0,1,3,0,17,0,2,0,0,3,0,0,0
+P7242446,ALAN,Control_1,Control,Third,Night,Before,Two,7,42,0,10,0,5,0,0,0,15,0,0,1,0,26,14,0,0,0,0,1,0,0
+P7242447,ALAN,Control_1,Control,Third,Night,Before,Two,6,30,0,10,0,0,0,0,0,20,0,0,2,0,16,0,11,1,0,0,0,0,0
+P7242448,ALAN,Control_1,Control,Third,Night,Before,Two,5,20,0,20,0,0,0,0,0,20,0,0,4,0,7,0,9,0,0,0,0,0,0
+P7242439,ALAN,Control_1,Control,Third,Night,Before,Zero,7,12,0,25,0,0,0,0,0,15,0,2,1,0,5,4,2,0,0,0,0,0,0
+P7242440,ALAN,Control_1,Control,Third,Night,Before,Zero,7,23,0,5,0,0,0,0,5,10,5,2,0,0,18,5,0,0,0,0,0,0,0
+P7242441,ALAN,Control_1,Control,Third,Night,Before,Zero,6,17,0,10,0,0,0,0,0,5,0,0,3,0,2,0,6,0,0,0,6,0,0
+P7242442,ALAN,Control_1,Control,Third,Night,Before,Zero,7,15,0,20,10,0,0,0,0,0,0,3,3,0,5,3,4,0,0,0,0,0,0
+P7242480,Syd,Control_2,Control,Third,Night,Before,One,6,11,0,35,0,25,0,0,0,10,0,2,4,7,0,0,0,0,0,0,0,0,0
+P7242481,Syd,Control_2,Control,Third,Night,Before,One,6,25,0,20,0,5,0,0,0,15,0,0,4,0,16,5,0,0,0,0,0,0,0
+P7242482,Syd,Control_2,Control,Third,Night,Before,One,5,12,0,0,0,35,0,5,0,15,0,0,5,0,7,0,0,0,0,0,0,0,0
+P7242483,Syd,Control_2,Control,Third,Night,Before,Two,9,18,0,40,5,15,0,0,0,25,0,4,4,2,11,0,0,1,0,0,0,0,0
+P7242484,Syd,Control_2,Control,Third,Night,Before,Two,7,14,0,15,0,5,0,0,0,10,0,0,6,2,5,0,0,0,0,0,0,0,1
+P7242485,Syd,Control_2,Control,Third,Night,Before,Two,9,26,0,20,10,10,0,5,0,20,0,3,2,0,23,0,0,0,0,1,0,0,0
+P7242476,Syd,Control_2,Control,Third,Night,Before,Zero,7,12,0,30,0,10,0,0,0,5,0,1,5,4,3,0,0,0,0,0,0,0,0
+P7242477,Syd,Control_2,Control,Third,Night,Before,Zero,6,15,0,20,0,5,0,0,0,0,0,0,6,5,2,0,2,0,0,0,0,0,0
+P7242478,Syd,Control_2,Control,Third,Night,Before,Zero,7,17,0,20,0,5,0,0,0,0,0,2,8,5,3,0,0,0,0,0,0,1,0
+P7242479,Syd,Control_2,Control,Third,Night,Before,Zero,8,22,0,20,0,15,0,0,0,15,0,3,3,0,13,5,0,0,0,1,0,0,0
+P7242462,Mac,Red_LED_1,Red LED,Third,Night,Before,One,5,21,0,15,0,0,0,0,0,0,0,0,4,0,6,4,7,0,0,0,0,0,0
+P7242463,Mac,Red_LED_1,Red LED,Third,Night,Before,One,5,11,0,20,0,0,0,0,0,25,0,0,3,0,5,0,3,0,0,0,0,0,0
+P7242464,Mac,Red_LED_1,Red LED,Third,Night,Before,One,5,17,0,15,0,0,0,0,0,15,0,0,0,11,0,0,4,0,0,0,2,0,0
+P7242465,Mac,Red_LED_1,Red LED,Third,Night,Before,Two,6,20,0,15,5,0,0,0,0,20,0,0,2,0,12,0,6,0,0,0,0,0,0
+P7242466,Mac,Red_LED_1,Red LED,Third,Night,Before,Two,6,7,0,30,0,0,0,5,0,10,0,1,0,0,5,0,2,0,0,0,0,0,0
+P7242467,Mac,Red_LED_1,Red LED,Third,Night,Before,Two,7,13,0,15,0,0,0,0,0,15,0,2,2,0,5,0,2,0,0,4,0,0,0
+P7242458,Mac,Red_LED_1,Red LED,Third,Night,Before,Zero,3,9,0,15,0,0,0,0,0,0,0,0,0,0,0,0,7,0,0,0,2,0,0
+P7242459,Mac,Red_LED_1,Red LED,Third,Night,Before,Zero,4,7,0,20,0,0,0,0,0,20,0,1,0,0,0,0,7,0,0,0,0,0,0
+P7242460,Mac,Red_LED_1,Red LED,Third,Night,Before,Zero,5,12,0,10,0,5,0,0,0,10,0,0,0,0,6,0,6,0,0,0,0,0,0
+P7242461,Mac,Red_LED_1,Red LED,Third,Night,Before,Zero,4,18,0,5,0,0,0,0,0,10,0,0,0,0,12,0,6,0,0,0,0,0,0
+P7242513,Marine,Red_LED_2,Red LED,Third,Night,Before,One,4,12,0,0,0,25,0,0,0,35,0,0,7,5,0,0,0,0,0,0,0,0,0
+P7242514,Marine,Red_LED_2,Red LED,Third,Night,Before,One,2,10,0,0,0,0,0,0,0,0,0,0,3,7,0,0,0,0,0,0,0,0,0
+P7242518,Marine,Red_LED_2,Red LED,Third,Night,Before,One,3,23,0,0,0,0,0,0,0,0,0,0,2,3,0,18,0,0,0,0,0,0,0
+P7242515,Marine,Red_LED_2,Red LED,Third,Night,Before,Two,3,7,0,0,5,0,0,0,0,0,0,0,4,3,0,0,0,0,0,0,0,0,0
+P7242516,Marine,Red_LED_2,Red LED,Third,Night,Before,Two,5,9,0,0,0,15,0,5,0,15,0,0,3,6,0,0,0,0,0,0,0,0,0
+P7242517,Marine,Red_LED_2,Red LED,Third,Night,Before,Two,5,10,0,0,10,0,0,0,0,10,0,2,5,5,0,0,0,0,0,0,0,0,0
+P7242510,Marine,Red_LED_2,Red LED,Third,Night,Before,Zero,8,9,0,0,0,5,0,0,0,10,0,2,4,2,1,0,1,1,0,0,0,0,0
+P7242511,Marine,Red_LED_2,Red LED,Third,Night,Before,Zero,4,8,0,0,10,0,0,0,0,15,0,0,3,5,0,0,0,0,0,0,0,0,0
+P7242512,Marine,Red_LED_2,Red LED,Third,Night,Before,Zero,5,8,0,0,5,10,0,0,0,0,0,1,4,4,0,0,0,0,0,0,0,0,0
+P7242519,Marine,Red_LED_2,Red LED,Third,Night,Before,Zero,4,8,0,0,30,0,0,0,0,0,0,1,3,5,0,0,0,0,0,0,0,0,0
+P7242383,Luxo,White_LED_1,White LED,Third,Night,Before,One,6,36,0,0,5,0,0,5,0,10,0,0,6,5,0,25,0,0,0,0,0,0,0
+P7242384,Luxo,White_LED_1,White LED,Third,Night,Before,One,4,50,0,0,20,0,0,0,0,10,0,0,0,18,0,32,0,0,0,0,0,0,0
+P7242385,Luxo,White_LED_1,White LED,Third,Night,Before,One,7,6,0,0,20,0,0,5,0,15,0,1,2,3,0,0,0,0,1,0,0,0,0
+P7242386,Luxo,White_LED_1,White LED,Third,Night,Before,Two,6,40,0,0,40,0,0,0,0,85,0,4,5,34,0,0,0,0,0,0,0,0,1
+P7242387,Luxo,White_LED_1,White LED,Third,Night,Before,Two,5,50,0,0,0,0,0,0,0,80,0,1,1,14,0,35,0,0,0,0,0,0,0
+P7242388,Luxo,White_LED_1,White LED,Third,Night,Before,Two,4,35,0,0,0,0,0,20,0,30,0,0,0,11,0,24,0,0,0,0,0,0,0
+P7242381,Luxo,White_LED_1,White LED,Third,Night,Before,Zero,5,37,0,0,30,0,0,0,0,30,0,1,2,0,0,35,0,0,0,0,0,0,0
+P7242382,Luxo,White_LED_1,White LED,Third,Night,Before,Zero,5,4,0,0,30,0,0,5,0,30,0,1,4,0,0,0,0,0,0,0,0,0,0
+P7242389,Luxo,White_LED_1,White LED,Third,Night,Before,Zero,3,65,0,0,0,0,0,0,0,10,0,0,0,27,0,38,0,0,0,0,0,0,0
+P7242390,Luxo,White_LED_1,White LED,Third,Night,Before,Zero,3,15,0,0,0,0,0,5,0,50,0,0,0,15,0,0,0,0,0,0,0,0,0
+P7242424,Lumen,White_LED_2,White LED,Third,Night,Before,One,7,43,0,0,0,0,0,5,0,20,0,1,1,6,19,17,0,0,0,0,0,0,0
+P7242425,Lumen,White_LED_2,White LED,Third,Night,Before,One,4,51,0,0,0,5,0,0,0,30,0,0,0,0,33,18,0,0,0,0,0,0,0
+P7242426,Lumen,White_LED_2,White LED,Third,Night,Before,One,6,33,0,5,15,0,0,0,0,10,0,0,2,6,25,0,0,0,0,0,0,0,0
+P7242427,Lumen,White_LED_2,White LED,Third,Night,Before,Two,8,24,0,20,10,0,0,0,0,20,0,1,4,8,11,0,0,0,0,1,0,0,0
+P7242428,Lumen,White_LED_2,White LED,Third,Night,Before,Two,5,41,0,0,0,0,0,0,0,85,0,3,1,0,26,14,0,0,0,0,0,0,0
+P7242429,Lumen,White_LED_2,White LED,Third,Night,Before,Two,5,30,0,0,45,0,0,0,0,15,0,0,5,0,9,16,0,0,0,0,0,0,0
+P7242420,Lumen,White_LED_2,White LED,Third,Night,Before,Zero,7,33,0,20,15,10,0,0,0,20,0,0,1,0,26,6,0,0,0,0,0,0,0
+P7242421,Lumen,White_LED_2,White LED,Third,Night,Before,Zero,5,40,0,20,10,0,0,0,0,0,0,0,3,0,25,12,0,0,0,0,0,0,0
+P7242422,Lumen,White_LED_2,White LED,Third,Night,Before,Zero,5,13,0,25,0,0,0,0,0,0,0,3,2,0,10,0,0,1,0,0,0,0,0
+P7242423,Lumen,White_LED_2,White LED,Third,Night,Before,Zero,5,26,0,15,10,0,0,0,0,15,0,0,3,0,23,0,0,0,0,0,0,0,0
+P7242404,Glo,Yellow_LED_1,Yellow LED,Third,Night,Before,One,5,92,0,0,20,10,0,0,0,20,0,0,0,0,57,35,0,0,0,0,0,0,0
+P7242405,Glo,Yellow_LED_1,Yellow LED,Third,Night,Before,One,4,104,0,0,0,10,0,0,0,25,0,0,0,0,61,43,0,0,0,0,0,0,0
+P7242406,Glo,Yellow_LED_1,Yellow LED,Third,Night,Before,One,7,83,0,0,15,5,0,0,0,25,0,2,2,0,58,23,0,0,0,0,0,0,0
+P7242407,Glo,Yellow_LED_1,Yellow LED,Third,Night,Before,Two,5,81,0,0,20,5,0,0,0,20,0,0,0,0,35,46,0,0,0,0,0,0,0
+P7242408,Glo,Yellow_LED_1,Yellow LED,Third,Night,Before,Two,5,48,0,0,70,5,0,0,0,0,0,0,2,0,34,12,0,0,0,0,0,0,0
+P7242409,Glo,Yellow_LED_1,Yellow LED,Third,Night,Before,Two,6,60,0,0,60,5,0,0,5,0,0,0,1,0,37,22,0,0,0,0,0,0,0
+P7242400,Glo,Yellow_LED_1,Yellow LED,Third,Night,Before,Zero,4,52,0,0,0,0,0,0,0,15,0,0,0,0,24,27,1,0,0,0,0,0,0
+P7242401,Glo,Yellow_LED_1,Yellow LED,Third,Night,Before,Zero,4,23,0,0,20,0,0,0,0,10,0,0,2,21,0,0,0,0,0,0,0,0,0
+P7242402,Glo,Yellow_LED_1,Yellow LED,Third,Night,Before,Zero,6,69,0,0,35,0,0,0,0,10,0,0,1,34,0,32,2,0,0,0,0,0,0
+P7242403,Glo,Yellow_LED_1,Yellow LED,Third,Night,Before,Zero,4,67,0,0,45,5,0,0,0,0,0,0,0,0,46,21,0,0,0,0,0,0,0
+P7242496,Ti,Yellow_LED_2,Yellow LED,Third,Night,Before,One,8,14,0,5,0,35,0,25,0,20,0,1,6,3,5,0,0,0,0,0,0,0,0
+P7242497,Ti,Yellow_LED_2,Yellow LED,Third,Night,Before,One,8,11,0,5,0,15,0,20,5,25,0,0,6,2,3,0,0,0,0,0,0,0,0
+P7242498,Ti,Yellow_LED_2,Yellow LED,Third,Night,Before,One,9,12,0,5,0,20,0,5,0,15,0,1,1,4,3,0,0,0,0,0,0,0,4
+P7242499,Ti,Yellow_LED_2,Yellow LED,Third,Night,Before,Two,6,12,0,15,0,20,0,0,0,15,0,0,4,6,2,0,0,0,0,0,0,0,0
+P7242500,Ti,Yellow_LED_2,Yellow LED,Third,Night,Before,Two,8,8,0,10,0,15,0,5,0,15,0,1,5,2,0,0,1,0,0,0,0,0,0
+P7242501,Ti,Yellow_LED_2,Yellow LED,Third,Night,Before,Two,3,6,0,10,0,0,0,0,0,0,0,0,4,0,2,0,0,0,0,0,0,0,0
+P7242493,Ti,Yellow_LED_2,Yellow LED,Third,Night,Before,Zero,9,12,0,15,0,25,0,10,0,25,0,2,1,4,3,0,0,0,0,0,0,0,4
+P7242494,Ti,Yellow_LED_2,Yellow LED,Third,Night,Before,Zero,9,9,0,15,0,40,0,20,0,30,0,1,3,1,3,0,0,0,0,0,0,0,2
+P7242495,Ti,Yellow_LED_2,Yellow LED,Third,Night,Before,Zero,7,11,0,0,0,25,0,20,0,25,0,4,4,5,2,0,0,0,0,0,0,0,0
+P7242502,Ti,Yellow_LED_2,Yellow LED,Third,Night,Before,Zero,7,9,0,30,0,10,0,0,0,10,0,1,4,4,0,0,1,0,0,0,0,0,0
+P7242590,ALAN,Control_1,Control,Third,Night,After,One,7,19,0,30,0,0,0,0,0,20,0,3,2,0,5,5,7,0,0,0,0,0,0
+P7242591,ALAN,Control_1,Control,Third,Night,After,One,7,11,0,15,15,0,0,0,0,15,0,0,1,2,5,0,3,0,0,0,0,0,0
+P7242592,ALAN,Control_1,Control,Third,Night,After,One,6,32,0,5,0,0,0,0,10,0,10,0,2,0,18,12,0,0,0,0,0,0,0
+P7242593,ALAN,Control_1,Control,Third,Night,After,Two,9,23,0,25,10,0,0,0,0,15,0,2,3,4,7,6,3,0,0,0,0,0,0
+P7242594,ALAN,Control_1,Control,Third,Night,After,Two,6,9,0,15,0,0,0,5,10,0,0,2,0,4,5,0,0,0,0,0,0,0,0
+P7242595,ALAN,Control_1,Control,Third,Night,After,Two,8,17,0,20,5,5,0,0,0,15,0,0,1,3,11,0,0,0,0,2,0,0,0
+P7242586,ALAN,Control_1,Control,Third,Night,After,Zero,5,11,0,35,0,0,0,0,0,25,0,0,3,2,0,0,6,0,0,0,0,0,0
+P7242587,ALAN,Control_1,Control,Third,Night,After,Zero,5,7,0,15,0,0,0,0,0,10,0,6,0,2,5,0,0,0,0,0,0,0,0
+P7242588,ALAN,Control_1,Control,Third,Night,After,Zero,7,21,0,15,0,0,0,0,5,20,0,2,2,0,9,10,0,0,0,0,0,0,0
+P7242589,ALAN,Control_1,Control,Third,Night,After,Zero,4,6,0,35,0,0,0,0,0,0,0,3,3,0,0,3,0,0,0,0,0,0,0
+P7242626,Syd,Control_2,Control,Third,Night,After,One,10,24,0,25,5,20,0,0,0,10,0,2,4,2,10,5,3,0,0,0,0,0,0
+P7242627,Syd,Control_2,Control,Third,Night,After,One,8,44,0,15,5,35,0,0,0,20,0,0,1,0,35,5,3,0,0,0,0,0,0
+P7242628,Syd,Control_2,Control,Third,Night,After,One,8,17,0,35,5,10,0,0,0,15,0,3,2,0,13,0,2,0,0,0,0,0,0
+P7242629,Syd,Control_2,Control,Third,Night,After,Two,5,10,0,0,5,10,0,0,0,10,0,0,3,0,7,0,0,0,0,0,0,0,0
+P7242630,Syd,Control_2,Control,Third,Night,After,Two,7,13,0,20,5,5,0,0,0,15,0,0,4,0,5,4,0,0,0,0,0,0,0
+P7242631,Syd,Control_2,Control,Third,Night,After,Two,9,27,0,15,0,35,0,5,0,55,0,3,1,0,20,4,2,0,0,0,0,0,0
+P7242622,Syd,Control_2,Control,Third,Night,After,Zero,6,14,0,25,0,5,0,0,0,0,0,1,5,6,3,0,0,0,0,0,0,0,0
+P7242623,Syd,Control_2,Control,Third,Night,After,Zero,7,11,0,30,0,10,0,0,0,0,0,5,4,3,1,3,0,0,0,0,0,0,0
+P7242624,Syd,Control_2,Control,Third,Night,After,Zero,7,28,0,15,0,0,0,0,0,5,0,0,6,2,17,0,2,0,0,1,0,0,0
+P7242625,Syd,Control_2,Control,Third,Night,After,Zero,8,14,0,40,0,20,0,5,0,5,0,21,7,0,4,0,3,0,0,0,0,0,0
+P7242609,Mac,Red_LED_1,Red LED,Third,Night,After,One,7,18,0,10,0,10,0,5,0,20,0,0,0,0,11,0,5,0,0,2,0,0,0
+P7242610,Mac,Red_LED_1,Red LED,Third,Night,After,One,8,15,0,25,0,0,0,0,0,15,0,1,2,5,4,0,3,0,0,1,0,0,0
+P7242611,Mac,Red_LED_1,Red LED,Third,Night,After,One,9,23,0,30,0,5,0,0,0,20,0,2,1,0,13,0,5,0,0,2,0,0,2
+P7242612,Mac,Red_LED_1,Red LED,Third,Night,After,Two,5,10,0,15,0,0,0,0,0,0,5,0,3,0,4,0,3,0,0,0,0,0,0
+P7242613,Mac,Red_LED_1,Red LED,Third,Night,After,Two,5,12,0,20,0,0,0,0,0,10,0,0,2,0,8,0,2,0,0,0,0,0,0
+P7242614,Mac,Red_LED_1,Red LED,Third,Night,After,Two,5,17,0,20,0,0,0,0,0,0,0,0,3,3,6,0,5,0,0,0,0,0,0
+P7242605,Mac,Red_LED_1,Red LED,Third,Night,After,Zero,5,10,0,5,0,0,0,0,0,0,0,0,2,0,2,0,3,0,0,3,0,0,0
+P7242606,Mac,Red_LED_1,Red LED,Third,Night,After,Zero,3,3,0,10,0,0,0,0,0,20,0,0,0,0,3,0,0,0,0,0,0,0,0
+P7242607,Mac,Red_LED_1,Red LED,Third,Night,After,Zero,4,6,0,30,0,0,0,0,0,10,0,0,0,0,2,0,4,0,0,0,0,0,0
+P7242608,Mac,Red_LED_1,Red LED,Third,Night,After,Zero,5,16,0,5,0,0,0,0,0,0,0,0,0,3,6,0,6,0,0,1,0,0,0
+P7242658,Marine,Red_LED_2,Red LED,Third,Night,After,One,5,11,0,0,5,10,0,0,0,15,0,0,9,2,0,0,0,0,0,0,0,0,0
+P7242662,Marine,Red_LED_2,Red LED,Third,Night,After,One,6,10,0,0,20,0,0,0,0,10,0,2,5,1,4,0,0,0,0,0,0,0,0
+P7242663,Marine,Red_LED_2,Red LED,Third,Night,After,One,5,9,0,0,15,0,0,0,0,5,0,0,3,2,4,0,0,0,0,0,0,0,0
+P7242659,Marine,Red_LED_2,Red LED,Third,Night,After,Two,3,4,0,0,5,0,0,0,0,0,0,0,2,2,0,0,0,0,0,0,0,0,0
+P7242660,Marine,Red_LED_2,Red LED,Third,Night,After,Two,3,10,0,0,10,0,0,0,0,0,0,0,7,3,0,0,0,0,0,0,0,0,0
+P7242661,Marine,Red_LED_2,Red LED,Third,Night,After,Two,6,8,0,0,5,10,0,0,0,20,0,3,6,2,0,0,0,0,0,0,0,0,0
+P7242656,Marine,Red_LED_2,Red LED,Third,Night,After,Zero,6,9,0,0,0,20,0,5,0,20,0,0,5,3,1,0,0,0,0,0,0,0,0
+P7242657,Marine,Red_LED_2,Red LED,Third,Night,After,Zero,6,7,0,0,0,20,0,10,0,35,0,0,2,2,3,0,0,0,0,0,0,0,0
+P7242664,Marine,Red_LED_2,Red LED,Third,Night,After,Zero,8,19,0,0,5,0,0,0,10,35,0,2,0,3,7,0,8,1,0,0,0,0,0
+P7242665,Marine,Red_LED_2,Red LED,Third,Night,After,Zero,6,13,0,0,5,0,0,0,0,20,0,1,6,5,2,0,0,0,0,0,0,0,0
+P7242535,Luxo,White_LED_1,White LED,Third,Night,After,One,6,33,0,0,20,0,0,5,0,20,0,0,0,7,5,21,0,0,0,0,0,0,0
+P7242540,Luxo,White_LED_1,White LED,Third,Night,After,One,4,33,0,0,0,0,0,0,0,25,0,0,0,5,5,23,0,0,0,0,0,0,0
+P7242541,Luxo,White_LED_1,White LED,Third,Night,After,One,4,47,0,0,0,0,0,0,0,25,0,2,4,0,0,43,0,0,0,0,0,0,0
+P7242542,Luxo,White_LED_1,White LED,Third,Night,After,Two,6,85,0,0,0,0,0,5,0,20,0,1,4,0,46,35,0,0,0,0,0,0,0
+P7242543,Luxo,White_LED_1,White LED,Third,Night,After,Two,5,87,0,0,25,0,0,0,0,85,0,5,0,0,9,78,0,0,0,0,0,0,0
+P7242544,Luxo,White_LED_1,White LED,Third,Night,After,Two,6,69,0,0,15,0,0,5,0,15,0,0,0,15,8,46,0,0,0,0,0,0,0
+P7242536,Luxo,White_LED_1,White LED,Third,Night,After,Zero,4,11,0,0,30,0,0,0,0,75,0,0,0,7,4,0,0,0,0,0,0,0,0
+P7242537,Luxo,White_LED_1,White LED,Third,Night,After,Zero,4,13,0,0,15,0,0,0,0,85,0,0,2,11,0,0,0,0,0,0,0,0,0
+P7242538,Luxo,White_LED_1,White LED,Third,Night,After,Zero,5,38,0,0,15,0,0,0,0,40,0,0,0,5,0,32,0,1,0,0,0,0,0
+P7242539,Luxo,White_LED_1,White LED,Third,Night,After,Zero,5,26,0,0,0,0,0,0,0,55,0,0,3,4,6,13,0,0,0,0,0,0,0
+P7242573,Lumen,White_LED_2,White LED,Third,Night,After,One,5,111,0,0,0,0,0,5,0,30,0,0,0,56,34,21,0,0,0,0,0,0,0
+P7242574,Lumen,White_LED_2,White LED,Third,Night,After,One,5,12,0,0,15,0,0,0,0,15,0,0,3,0,3,6,0,0,0,0,0,0,0
+P7242575,Lumen,White_LED_2,White LED,Third,Night,After,One,5,31,0,10,0,0,0,0,0,25,0,0,3,0,19,9,0,0,0,0,0,0,0
+P7242576,Lumen,White_LED_2,White LED,Third,Night,After,Two,7,62,0,0,0,5,0,0,0,75,0,2,2,16,32,12,0,0,0,0,0,0,0
+P7242577,Lumen,White_LED_2,White LED,Third,Night,After,Two,7,52,0,10,10,5,0,0,0,30,0,0,2,0,23,27,0,0,0,0,0,0,0
+P7242578,Lumen,White_LED_2,White LED,Third,Night,After,Two,8,69,0,0,25,0,0,5,0,30,0,1,1,0,19,47,0,0,0,0,0,0,2
+P7242569,Lumen,White_LED_2,White LED,Third,Night,After,Zero,8,49,0,15,0,10,0,5,0,10,0,0,1,17,24,0,0,0,0,7,0,0,0
+P7242570,Lumen,White_LED_2,White LED,Third,Night,After,Zero,6,47,0,15,0,10,0,0,0,25,0,0,2,0,42,0,0,0,0,3,0,0,0
+P7242571,Lumen,White_LED_2,White LED,Third,Night,After,Zero,7,55,0,20,0,15,0,0,0,20,0,0,3,0,43,7,0,0,0,2,0,0,0
+P7242572,Lumen,White_LED_2,White LED,Third,Night,After,Zero,7,46,0,20,0,0,0,5,0,15,0,0,3,7,23,13,0,0,0,0,0,0,0
+P7242555,Glo,Yellow_LED_1,Yellow LED,Third,Night,After,One,5,77,0,0,15,10,0,0,0,25,0,0,0,0,54,23,0,0,0,0,0,0,0
+P7242556,Glo,Yellow_LED_1,Yellow LED,Third,Night,After,One,6,93,0,0,15,10,0,0,0,10,0,0,0,0,59,33,0,0,0,0,0,0,1
+P7242557,Glo,Yellow_LED_1,Yellow LED,Third,Night,After,One,6,93,0,0,15,10,0,0,0,15,0,1,0,0,42,51,0,0,0,0,0,0,0
+P7242552,Glo,Yellow_LED_1,Yellow LED,Third,Night,After,Two,6,25,0,0,35,0,0,0,0,35,0,0,3,0,14,6,2,0,0,0,0,0,0
+P7242553,Glo,Yellow_LED_1,Yellow LED,Third,Night,After,Two,4,45,0,0,0,0,0,0,0,25,0,0,1,0,28,16,0,0,0,0,0,0,0
+P7242554,Glo,Yellow_LED_1,Yellow LED,Third,Night,After,Two,6,55,0,0,10,5,0,0,0,30,0,0,1,0,35,19,0,0,0,0,0,0,0
+P7242558,Glo,Yellow_LED_1,Yellow LED,Third,Night,After,Zero,5,60,0,0,20,10,0,0,0,15,0,0,0,0,38,22,0,0,0,0,0,0,0
+P7242559,Glo,Yellow_LED_1,Yellow LED,Third,Night,After,Zero,5,23,0,0,60,0,0,0,0,0,0,1,1,0,15,7,0,0,0,0,0,0,0
+P7242560,Glo,Yellow_LED_1,Yellow LED,Third,Night,After,Zero,4,70,0,0,10,0,0,0,0,20,0,0,0,0,46,24,0,0,0,0,0,0,0
+P7242561,Glo,Yellow_LED_1,Yellow LED,Third,Night,After,Zero,6,62,0,0,20,0,0,0,0,25,0,1,3,0,54,5,0,0,0,0,0,0,0
+P7242641,Ti,Yellow_LED_2,Yellow LED,Third,Night,After,One,9,7,0,0,0,20,0,35,5,55,0,6,1,2,3,0,0,1,0,0,0,0,0
+P7242642,Ti,Yellow_LED_2,Yellow LED,Third,Night,After,One,8,13,0,15,0,35,0,10,0,25,0,4,4,8,1,0,0,0,0,0,0,0,0
+P7242643,Ti,Yellow_LED_2,Yellow LED,Third,Night,After,One,4,4,0,30,0,5,0,0,0,0,0,0,2,0,0,2,0,0,0,0,0,0,0
+P7242638,Ti,Yellow_LED_2,Yellow LED,Third,Night,After,Two,6,12,0,20,0,20,0,0,0,20,0,0,4,6,2,0,0,0,0,0,0,0,0
+P7242639,Ti,Yellow_LED_2,Yellow LED,Third,Night,After,Two,7,10,0,5,0,20,0,10,0,40,0,0,4,4,2,0,0,0,0,0,0,0,0
+P7242640,Ti,Yellow_LED_2,Yellow LED,Third,Night,After,Two,9,11,0,20,0,30,0,10,0,25,0,4,4,3,3,0,0,1,0,0,0,0,0
+P7242644,Ti,Yellow_LED_2,Yellow LED,Third,Night,After,Zero,7,14,0,5,0,25,0,0,0,15,0,0,4,5,3,0,2,0,0,0,0,0,0
+P7242645,Ti,Yellow_LED_2,Yellow LED,Third,Night,After,Zero,7,6,0,5,0,0,0,10,0,30,0,2,1,2,3,0,0,0,0,0,0,0,0
+P7242646,Ti,Yellow_LED_2,Yellow LED,Third,Night,After,Zero,8,9,0,10,0,20,0,20,0,25,0,0,4,2,2,0,0,1,0,0,0,0,0
+P7242647,Ti,Yellow_LED_2,Yellow LED,Third,Night,After,Zero,6,8,0,10,0,15,0,5,0,25,0,0,5,3,0,0,0,0,0,0,0,0,0
