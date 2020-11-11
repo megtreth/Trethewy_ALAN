@@ -1,10 +1,13 @@
-## Artificial Light at Night surveys around Sydney Harbour and the assessment of intertidal assemblages 
-# Date: 3-8 April 2019, 12-14 August 2019, 22-24 March 2020, 19 June - 3 July 2020,  
-# Location: Sydney Harbour, Australia
-# Description: This project was conducted for Megan Trethewy's Master of Research at Macquarie University, Sydney Australia. 
-# I conducted an investigation as the effects of Artificial Light At Night on intertidal grazing species at 12 different locations across Sydney: Balmain, Balmoral, Berry Island, Bradley's Head Reserve, Farm Cove, Kirribilli, Kurraba, Lavender Bay, Neilson Park, Rose Bay, Sawmiller's Reserve and Watsons Bay - all of which hosted either a seawall and or a rocky shore 
-# I conducted ecological surveys of the areas, which involved ten photographs at each of the tide levels (low, mid and high) along a 10m transect. Each of the pictures is listed in the raw data "ALAN_Dataset_2020.xlsx", and indicates the percent coverage and richness of sessile and algal species as well as the abundance and diversity of mobile species. 
-# The dataset also indicates which round the pictures were taken; One is April 2019, Two is August 2019, Three is March 2020, Four is June 2020. Pictures were taken during the day and at night time at the lowest tide. 
-# To meausure the intensity and spread of ALAN, lux (which measures the intensity of immediate light sources) and sky glow (the reflection of light sources from particles in the sky). Lux measures were taken with a handheld light metre, while the sky glow was recorded with a Sky Quality Metre.
-# Wax discs were also used in the Four round of sampling (June 2020) to assess the activity and intensity of grazing species along each of the sampled intertidal habitats. The results are listed in the raw data "ALAN_June_WD_Data.xlsx". 
-# These were made from dental wax and crown seal bottle caps, were installed on the substrate using epoxy putty and left for 14 days. Once the period of time had passed, the percent of the disc that had been grazed as well as the number and diversity of markings left by the radular of grazing species was assessed using a dissecting microscope. 
+Artificial Light at Night surveys around Sydney Harbour and the assessment of intertidal assemblages 
+
+Date: 3-8 April 2019, 12-14 August 2019, 22-24 March 2020, 19 June - 3 July 2020,  
+
+Location: Sydney Harbour, Australia
+
+Description: This project was conducted for Megan Trethewy's Master of Research at Macquarie University, Sydney Australia. 
+I conducted an investigation as the effects of Artificial Light At Night on intertidal grazing species at 12 different locations across Sydney: Balmain, Balmoral, Berry Island, Bradley's Head Reserve, Farm Cove, Kirribilli, Kurraba, Lavender Bay, Neilson Park, Rose Bay, Sawmiller's Reserve and Watsons Bay - all of which hosted either a seawall and or a rocky shore 
+I conducted ecological surveys of the areas, which involved ten photographs at each of the tide levels (low, mid and high) along a 10m transect. Each of the pictures is listed in the raw data "ALAN_Dataset_2020.xlsx", and indicates the percent coverage and richness of sessile and algal species as well as the abundance and diversity of mobile species. 
+The dataset also indicates which round the pictures were taken; One is April 2019, Two is August 2019, Three is March 2020, Four is June 2020. Pictures were taken during the day and at night time at the lowest tide. 
+To meausure the intensity and spread of ALAN, lux (which measures the intensity of immediate light sources) and sky glow (the reflection of light sources from particles in the sky). Lux measures were taken with a handheld light metre, while the sky glow was recorded with a Sky Quality Metre.
+Wax discs were also used in the Four round of sampling (June 2020) to assess the activity and intensity of grazing species along each of the sampled intertidal habitats. The results are listed in the raw data "ALAN_June_WD_Data.xlsx". 
+These were made from dental wax and crown seal bottle caps, were installed on the substrate using epoxy putty and left for 14 days. Once the period of time had passed, the percent of the disc that had been grazed as well as the number and diversity of markings left by the radular of grazing species was assessed using a dissecting microscope. 
