@@ -1,0 +1,904 @@
+# R Code used for the analysis of ALAN in Sydney Harbour, the abundance and richness of intertidal mobile speices, the percent cover and richness of algal and sessile species and the wax discs results
+
+#Artificial Light At Night Survey Data 
+
+library("ggplot2")
+library("tidyverse")
+library("plyr")
+library("dplyr")
+library("tidyverse")
+library("ggplot2")
+library("car")
+library("phia")
+library("readr")
+library("lme4")
+library("lmerTest")
+library("emmeans")
+library("readr")
+library("ggpubr")
+library("readxl")
+library("gridExtra")
+library("grid")
+library("lattice")
+
+#clearing the global environment
+rm(list = ls())
+
+
+ALAN_Sept <- read_excel("OneDrive - Macquarie University/ALAN Data/ALAN_Dataset_2020.xlsx")
+View(ALAN_Sept)
+
+ALAN_Sept_DF <- as.data.frame(unclass(ALAN_Sept))
+str(ALAN_Sept_DF)
+
+#Mid Tide data subset
+Mid_Dataset <- subset(ALAN_Sept_DF, Tide == "Mid", select = c("Time", "Round", "Location", "Location_Num", "Zone", "Habitat", "Tide", "Lux_200", "Lux_0", "Sky_Glow", "Species_Richness", "Mobile_Sp_Abundance", "Mobile_Sp_Richness", "Sessile_Sp_Abundance", "Sessile_Sp_Richness", "Algal_Sp_Percent_Cover", "Algal_Sp_Richness", "Grazers", "Grazers_Richness"))
+str(Mid_Dataset)
+Mid_Df <- as.data.frame(unclass(Mid_Dataset))
+str(Mid_Df)
+
+#Day Time Subset Data
+ALAN_Day_Sub <- subset(Mid_Df, Time == "Day", select = c("Time", "Round", "Location", "Location_Num", "Zone", "Habitat", "Tide", "Lux_200", "Species_Richness", "Mobile_Sp_Abundance", "Mobile_Sp_Richness", "Sessile_Sp_Abundance", "Sessile_Sp_Richness", "Algal_Sp_Percent_Cover", "Algal_Sp_Richness", "Grazers", "Grazers_Richness"))
+str(ALAN_Day_Sub)
+ALAN_Day_Sub <- droplevels(ALAN_Day_Sub)
+str(ALAN_Day_Sub)
+ALAN_Day <- as.data.frame(unclass(ALAN_Day_Sub))
+ALAN_Day$Location_Num = as.factor(ALAN_Day$Location_Num)
+ALAN_Day$Lux_200 = as.numeric(as.character(ALAN_Day$Lux_200))
+str(ALAN_Day)
+view(ALAN_Day)
+
+
+#Night Time Subset Data
+ALAN_Night_Sub <- subset(Mid_Df, Time == "Night", select = c("Time", "Round", "Location", "Location_Num", "Zone", "Habitat", "Tide", "Lux_0", "Sky_Glow", "Species_Richness", "Mobile_Sp_Abundance", "Mobile_Sp_Richness", "Sessile_Sp_Abundance", "Sessile_Sp_Richness", "Algal_Sp_Percent_Cover", "Algal_Sp_Richness", "Grazers", "Grazers_Richness"))
+str(ALAN_Night_Sub)
+ALAN_Night_Sub <- droplevels(ALAN_Night_Sub)
+str(ALAN_Night_Sub)
+ALAN_Night <- as.data.frame(unclass(ALAN_Night_Sub))
+ALAN_Night$Location_Num = as.factor(ALAN_Night$Location_Num)
+ALAN_Night$Lux_0 = as.numeric(as.character(ALAN_Night$Lux_0))
+ALAN_Night$Sky_Glow = as.numeric(as.character(ALAN_Night$Sky_Glow))
+str(ALAN_Night)
+view(ALAN_Night)
+
+
+# Dataset used for graphing
+
+# Day time results
+Day_Graph_data <- read_excel("OneDrive - Macquarie University/ALAN Data/Day_Graphs.xlsx")
+GD <- as.data.frame(unclass(Day_Graph_data))
+GD$Round <- factor(GD$Round, levels = c("One", "Two", "Three", "Four"))
+str(GD)
+
+# Night time results
+Night_Time_Graph_Data <- read_excel("OneDrive - Macquarie University/ALAN Data/Night_Graphs.xlsx")
+GN <- as.data.frame(unclass(Night_Time_Graph_Data))
+GN$Round <- factor(GN$Round, levels = c("One", "Two", "Three", "Four"))
+GN$Grazers_Richness <-as.numeric(as.character(GN$Grazers_Richness))
+str(GN)
+
+#Is the data normal?
+# Day Time Lux - does not look that normal 
+qqnorm(ALAN_Day$Lux_200)
+qqline(ALAN_Day$Lux_200, col = "red")
+#Night Time Lux - does not look normal
+qqnorm(ALAN_Night$Lux_0)
+qqline(ALAN_Night$Lux_0, col = "red")
+# Sky Glow - looks okay, but not great 
+qqnorm(ALAN_Night$Sky_Glow)
+qqline(ALAN_Night$Sky_Glow, col = "red")
+# Mobile Species Abundance - the data does not look normal, tried to transform but I couldn't work it out
+qqnorm(ALAN_Sept_DF$Mobile_Sp_Abundance)
+qqline(ALAN_Sept_DF$Mobile_Sp_Abundance, col= "red")
+# Mobile Species Richness - the data looks normal
+qqnorm(ALAN_Sept_DF$Mobile_Sp_Rich)
+qqline(ALAN_Sept_DF$Mobile_Sp_Rich, col= "red")
+# Sessile Species - this data does not look normal
+qqnorm(ALAN_Sept_DF$Sessile_Sp_Abundance)
+qqline(ALAN_Sept_DF$Sessile_Sp_Abundance, col="red")
+# Sessile Species Richness - does not look normal
+qqnorm(ALAN_Sept_DF$Sessile_Sp_Rich)
+qqline(ALAN_Sept_DF$Sessile_Sp_Rich, col = "red")
+
+
+#ALAN Statistics
+
+#Day Time Lux Measurements
+Lux_D <- glmer(Lux_200 ~ Zone * Habitat + (1|Location_Num/Zone) + (1|Round), data = subset(ALAN_Day), family = poisson)
+drop1(Lux_D, test = "Chi")
+plot(fitted(Lux_D), residuals(Lux_D))
+Anova(Lux_D)
+summary(Lux_D)
+LD_emm = emmeans(Lux_D, specs = pairwise ~ Zone*Habitat, type = "response")
+LD_emm$emmeans
+LD_emm$contrasts
+LD_emm$contrasts %>%  
+  confint()
+test(LD_emm)
+
+
+ALAN_Day_plot <- ddply(ALAN_Day, c("Zone", "Habitat"), summarise, Mean_LD = mean(Lux_200), SD_LD = sd(Lux_200))
+Lux_Day <- ggplot(ALAN_Day_plot, aes(x = Habitat, y = Mean_LD)) +
+  geom_bar(stat = "identity") + facet_wrap(.~Zone) +
+  ggtitle("a) Light Intensity Day") + ylab("Lux (lumen/m2)") + xlab("Habitat") +
+  geom_errorbar(aes(ymin = Mean_LD - SD_LD, ymax = Mean_LD + SD_LD), width = 0.2) +
+  theme_bw() + theme(panel.border = element_blank(), panel.grid.major = element_blank(),
+                     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black")) +
+  theme(axis.title.y = element_text(size = rel(1.25), angle = 90)) + theme(axis.title.x = element_text(size = rel(1.25), angle = 00)) + 
+  theme(plot.title = element_text(size = rel(1.5), angle = 00)) + 
+  theme(axis.text.x = element_text(size = 12, angle = 00),
+        axis.text.y = element_text(size = 12, angle = 90))+
+  theme(strip.text.x = element_text(size = 12))
+Lux_Day
+
+#Night Time Lux measurements 
+Lux_N <- lmer(Lux_0 ~ Zone * Habitat + (1|Location_Num/Zone) + (1|Round), data = subset(ALAN_Night))
+drop1(Lux_N, test = "Chi")
+plot(fitted(Lux_N), residuals(Lux_N))
+Anova(Lux_N)
+summary(Lux_N)
+
+
+ALAN_Night_plot <- ddply(ALAN_Night, c("Zone", "Habitat"), summarise, Mean_LN = mean(Lux_0), SD_LN = sd(Lux_0))
+Lux_Night <- ggplot(ALAN_Night_plot, aes(x = Habitat, y = Mean_LN)) +
+  geom_bar(stat = "identity") + facet_wrap(.~Zone) +
+  ggtitle("b) Light Intensity Night") + ylab("Lux (lumen/m2)") + xlab("Habitat") +
+  geom_errorbar(aes(ymin = Mean_LN - SD_LN, ymax = Mean_LN + SD_LN), width = 0.2) +
+  theme_bw() + theme(panel.border = element_blank(), panel.grid.major = element_blank(),
+                     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"))+
+  theme(axis.title.y = element_text(size = rel(1.25), angle = 90)) + theme(axis.title.x = element_text(size = rel(1.25), angle = 00)) + 
+  theme(plot.title = element_text(size = rel(1.5), angle = 00)) + 
+  theme(axis.text.x = element_text(size = 12, angle = 00),
+        axis.text.y = element_text(size = 12, angle = 90))+
+  theme(strip.text.x = element_text(size = 12))
+Lux_Night
+
+
+#Sky Glow 
+SkyG <- lmer(Sky_Glow ~ Zone * Habitat + (1|Location_Num/Zone) + (1|Round), data = subset(ALAN_Night))
+drop1(SkyG, test = "Chi")
+plot(fitted(SkyG), residuals(SkyG))
+Anova(SkyG)
+summary(SkyG)
+
+
+SG_plot <- ddply(ALAN_Night, c("Zone", "Habitat"), summarise, Mean_SG = mean(Sky_Glow), SD_SG = sd(Sky_Glow))
+Sky_Glow_ <-ggplot(SG_plot, aes(x = Habitat, y = Mean_SG)) +
+  geom_bar(stat = "identity") + facet_wrap(.~Zone) +
+  ggtitle("c) Sky Glow") + ylab("Sky Glow (mag/arcsec-2)") + xlab("Habitat") +
+  geom_errorbar(aes(ymin = Mean_SG - SD_SG, ymax = Mean_SG + SD_SG), width = 0.2) +
+  theme_bw() + theme(panel.border = element_blank(), panel.grid.major = element_blank(),
+                     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"))+
+  theme(axis.title.y = element_text(size = rel(1.25), angle = 90)) + theme(axis.title.x = element_text(size = rel(1.25), angle = 00)) + 
+  theme(plot.title = element_text(size = rel(1.5), angle = 00)) + 
+  theme(axis.text.x = element_text(size = 12, angle = 00),
+        axis.text.y = element_text(size = 12, angle = 90))+
+  theme(strip.text.x = element_text(size = 12))
+Sky_Glow_
+
+
+# Mobile Species Abundance
+# Day Time
+M_A_D <- glmer (Mobile_Sp_Abundance ~ Lux_200 * Habitat * Zone + (1|Location_Num/Zone) + (1|Round), data = subset(ALAN_Day), family = poisson)
+drop1(M_A_D, test = "Chi")
+plot(fitted(M_A_D), residuals(M_A_D))
+Anova(M_A_D)
+summary(M_A_D)
+MAD_trend = emtrends(M_A_D, pairwise ~ Habitat * Zone, var = "Lux_200")
+MAD_trend$emtrends
+MAD_trend$contrasts
+MAD_trend$contrasts %>%
+  confint()
+test(MAD_trend)
+
+# Mobile species during the day graph - Lux
+Mobile_D_Sp <- ggplot(GD, aes(x = Lux_x200, y = Mobile_Sp_Abundance)) +
+  geom_point((aes(colour = factor(Location), shape = factor(Round))), size = 3) + 
+  labs(title= "a) Mobile Species Abudnance (Day - Lux)",
+       y="Mobile Species Abudance", x = "Day Time Lux (lumen/m2)", colour = "Location", shape = "Sampling Round") + facet_wrap(~Zone + Habitat) +
+  theme_bw() + theme(panel.border = element_blank(), panel.grid.major = element_blank(),
+                     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"))+
+  theme(axis.title.y = element_text(size = rel(1.25), angle = 90)) + theme(axis.title.x = element_text(size = rel(1.25), angle = 00)) + 
+  theme(plot.title = element_text(size = rel(1.5), angle = 00)) + 
+  theme(axis.text.x = element_text(size = 12, angle = 00),
+        axis.text.y = element_text(size = 12, angle = 90))+
+  theme(strip.text.x = element_text(size = 12))
+Mobile_D_Sp
+
+#Night Time
+M_A_N <- glmer(Mobile_Sp_Abundance ~ Zone * Habitat * Lux_0 + (1|Location_Num/Zone) + (1|Round), data = subset(ALAN_Night), family = poisson)
+drop1(M_A_N, test = "Chi")
+plot(fitted(M_A_N), residuals(M_A_N))
+Anova(M_A_N)
+summary(M_A_N)
+MAN_trend = emtrends(M_A_N, pairwise ~ Habitat, var = "Lux_0")
+MAN_trend$emtrends
+MAN_trend$contrasts
+MAN_trend$contrasts %>%
+  confint()
+test(MAN_trend)
+
+# Mobile species abundance at night - Lux
+Mobile_N_Sp <- ggplot(GN, aes(x = Lux_x0, y = Mobile_Sp_Abundance)) +
+  geom_point((aes(colour = factor(Location), shape = factor(Round))), size = 3) + 
+  labs(title= "b) Mobile Species Abudnance (Night - Lux)",
+       y="Mobile Species Abudance", x = "Night Time Lux (lumen/m2)", colour = "Location", shape = "Sampling Round") + facet_wrap(~Zone + Habitat) +
+  theme_bw() + theme(panel.border = element_blank(), panel.grid.major = element_blank(),
+                     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"))+
+  theme(axis.title.y = element_text(size = rel(1.25), angle = 90)) + theme(axis.title.x = element_text(size = rel(1.25), angle = 00)) + 
+  theme(plot.title = element_text(size = rel(1.5), angle = 00)) + 
+  theme(axis.text.x = element_text(size = 12, angle = 00),
+        axis.text.y = element_text(size = 12, angle = 90))+
+  theme(strip.text.x = element_text(size = 12))
+Mobile_N_Sp
+
+#Sky Glow
+M_N_SG <- glmer(Mobile_Sp_Abundance ~ Zone * Habitat * Sky_Glow + (1|Location_Num/Zone) + (1|Round), data = subset(ALAN_Night), family = poisson)
+drop1(M_N_SG, test = "Chi")
+plot(fitted(M_N_SG), residuals(M_N_SG))
+Anova(M_N_SG)
+summary(M_N_SG)
+MNSG_trend = emtrends(M_N_SG, pairwise ~ Habitat * Zone, var = "Sky_Glow")
+MNSG_trend$emtrends
+MNSG_trend$contrasts
+MNSG_trend$contrasts %>%
+  confint()
+test(MNSG_trend)
+
+# Sky glow mobile species abundance graphs
+Mobile_SG_Sp <- ggplot(GN, aes(x = Sky_Glow, y = Mobile_Sp_Abundance)) +
+  geom_point(aes(colour = factor(Location), shape = factor(Round))) + 
+  labs(title= "c) Mobile Species Abudnance (Night - Sky Glow)",
+       y="Mobile Species Abudance", x ="Sky Glow (mag arcsec−2))", colour = "Location", shape = "Sampling Round") + facet_wrap(~Zone + Habitat) +
+  theme_bw() + theme(panel.border = element_blank(), panel.grid.major = element_blank(),
+                     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"))+
+  theme(axis.title.y = element_text(size = rel(1.25), angle = 90)) + theme(axis.title.x = element_text(size = rel(1.25), angle = 00)) + 
+  theme(plot.title = element_text(size = rel(1.5), angle = 00)) + 
+  theme(axis.text.x = element_text(size = 12, angle = 00),
+        axis.text.y = element_text(size = 12, angle = 90))+
+  theme(strip.text.x = element_text(size = 12))
+Mobile_SG_Sp
+
+# Mobile Species Richness 
+
+# Day Time
+M_R_D <- glmer (Mobile_Sp_Richness ~ Lux_200 * Habitat * Zone + (1|Location_Num/Zone) + (1|Round), data = subset(ALAN_Day), family = poisson)
+drop1(M_R_D, test = "Chi")
+plot(fitted(M_R_D), residuals(M_R_D))
+Anova(M_R_D)
+summary(M_R_D)
+
+
+
+# Mobile species richness day time graph - Lux
+Mobile_D_R <- ggplot(GD, aes(x = Lux_x200, y = Mobile_Sp_Richness)) +
+  geom_point((aes(colour = factor(Location), shape = factor(Round))), size = 3) + 
+  labs(title= "a) Mobile Species Richness (Day - Lux)",
+       y="Mobile Species Richness", x = "Lux (lumen/m2)", colour = "Location", shape = "Sampling Round") + facet_wrap(~Zone + Habitat) +
+  theme_bw() + theme(panel.border = element_blank(), panel.grid.major = element_blank(),
+                     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"))+
+  theme(axis.title.y = element_text(size = rel(1.25), angle = 90)) + theme(axis.title.x = element_text(size = rel(1.25), angle = 00)) + 
+  theme(plot.title = element_text(size = rel(1.5), angle = 00)) + 
+  theme(axis.text.x = element_text(size = 12, angle = 00),
+        axis.text.y = element_text(size = 12, angle = 90))+
+  theme(strip.text.x = element_text(size = 12))
+Mobile_D_R
+
+#Night Time
+M_R_N <- glmer(Mobile_Sp_Richness ~ Zone * Habitat * Lux_0 + (1|Location_Num/Zone) + (1|Round), data = subset(ALAN_Night), family = poisson)
+drop1(M_R_N, test = "Chi")
+plot(fitted(M_R_N), residuals(M_R_N))
+Anova(M_R_N)
+summary(M_R_N)
+MRN_trend = emtrends(M_R_N, pairwise ~ Habitat, var = "Lux_0")
+MRN_trend$emtrends
+MRN_trend$contrasts
+MRN_trend$contrasts %>%
+  confint()
+test(MRN_trend)
+
+# Night time mobile species richness - Lux 
+Mobile_N_R <- ggplot(GN, aes(x = Lux_x0, y = Mobile_Sp_Richness)) +
+  geom_point((aes(colour = factor(Location), shape = factor(Round))), size = 3) + 
+  labs(title= "b) Mobile Species Richness (Night - Lux)",
+       y="Mobile Species Richness", x = "Lux (lumen/m2)", colour = "Location", shape = "Sampling Round") + facet_wrap(~Zone + Habitat) +
+  theme_bw() + theme(panel.border = element_blank(), panel.grid.major = element_blank(),
+                     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"))+
+  theme(axis.title.y = element_text(size = rel(1.25), angle = 90)) + theme(axis.title.x = element_text(size = rel(1.25), angle = 00)) + 
+  theme(plot.title = element_text(size = rel(1.5), angle = 00)) + 
+  theme(axis.text.x = element_text(size = 12, angle = 00),
+        axis.text.y = element_text(size = 12, angle = 90))+
+  theme(strip.text.x = element_text(size = 12))
+Mobile_N_R
+
+# Sky glow
+M_R_SG <- glmer(Mobile_Sp_Richness ~ Zone * Habitat * Sky_Glow + (1|Location_Num/Zone) + (1|Round), data = subset(ALAN_Night), family = poisson)
+drop1(M_R_SG, test = "Chi")
+plot(fitted(M_R_SG), residuals(M_R_SG))
+Anova(M_R_SG)
+summary(M_R_SG)
+
+
+# Mobile species richness and sky glow
+Mobile_SG_R <- ggplot(GN, aes(x = Sky_Glow, y = Mobile_Sp_Richness)) +
+  geom_point(aes(colour = factor(Location), shape = factor(Round))) + 
+  labs(title= "c) Mobile Species Richness (Night - Sky Glow)",
+       y="Mobile Species Richness", x = "Sky Glow (mag arcsec-2)", colour = "Location", shape = "Sampling Round") + facet_wrap(~Zone + Habitat) +
+  theme_bw() + theme(panel.border = element_blank(), panel.grid.major = element_blank(),
+                     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"))+
+  theme(axis.title.y = element_text(size = rel(1.25), angle = 90)) + theme(axis.title.x = element_text(size = rel(1.25), angle = 00)) + 
+  theme(plot.title = element_text(size = rel(1.5), angle = 00)) + 
+  theme(axis.text.x = element_text(size = 12, angle = 00),
+        axis.text.y = element_text(size = 12, angle = 90))+
+  theme(strip.text.x = element_text(size = 12))
+Mobile_SG_R
+
+# Abundance of Intertidal Grazers 
+
+# Day Time
+Graz_glm <- glmer(Grazers ~ Zone * Habitat * Lux_200 + (1|Location_Num/Zone) + (1|Round), data = subset(ALAN_Day), family = poisson)
+drop1(Graz_glm, test = "Chi")
+plot(fitted(Graz_glm), residuals(Graz_glm))
+Anova(Graz_glm)
+summary(Graz_glm)
+Graz_trend = emtrends(Graz_glm, pairwise ~ Habitat * Zone, var = "Lux_200")
+Graz_trend$emtrends
+Graz_trend$contrasts
+Graz_trend$contrasts %>%
+  confint()
+test(Graz_trend)
+
+# Abundance of grazers during the day - Lux
+Graz_D_ab <- ggplot(GD, aes(x = Lux_x200, y = Grazer_Sp_Abundance)) +
+  geom_point((aes(colour = factor(Location), shape = factor(Round))), size = 3) +
+  labs(title= "a) Grazing Species Abundance (Day - Lux)",
+       y="Grazing Species Abundance", x = "Lux (lumen/m2)", colour = "Location", shape = "Sampling Round") + facet_wrap(~Zone + Habitat) +
+  theme_bw() + theme(panel.border = element_blank(), panel.grid.major = element_blank(),
+                     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"))+
+  theme(axis.title.y = element_text(size = rel(1.25), angle = 90)) + theme(axis.title.x = element_text(size = rel(1.25), angle = 00)) + 
+  theme(plot.title = element_text(size = rel(1.5), angle = 00)) + 
+  theme(axis.text.x = element_text(size = 12, angle = 00),
+        axis.text.y = element_text(size = 12, angle = 90))+
+  theme(strip.text.x = element_text(size = 12)) 
+Graz_D_ab
+
+
+# Night Time
+Graz_glm_N <- glmer(Grazers ~ Zone * Habitat * Lux_0 + (1|Location_Num/Zone) + (1|Round), data = subset(ALAN_Night), family = poisson)
+drop1(Graz_glm_N, test = "Chi")
+plot(fitted(Graz_glm_N), residuals(Graz_glm_N))
+Anova(Graz_glm_N)
+summary(Graz_glm_N)
+GrazN_trend = emtrends(Graz_glm_N, pairwise ~ Habitat * Zone, var = "Lux_0")
+GrazN_trend$emtrends
+GrazN_trend$contrasts
+GrazN_trend$contrasts %>%
+  confint()
+test(GrazN_trend)
+
+# Abundance of grazers during the night - Lux 
+Graz_N_Ab <- ggplot(GN, aes(x = Lux_x0, y = Grazer_Sp_Abundance)) +
+  geom_point((aes(colour = factor(Location), shape = factor(Round))), size = 3) + 
+  labs(title= "b) Grazing Species Abundance (Night - Lux)",
+       y="Grazing Species Abundance", x = "Lux (lumen/m2)", colour = "Location", shape = "Sampling Round") + facet_wrap(~Zone + Habitat) +
+  theme_bw() + theme(panel.border = element_blank(), panel.grid.major = element_blank(),
+                     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"))+
+  theme(axis.title.y = element_text(size = rel(1.25), angle = 90)) + theme(axis.title.x = element_text(size = rel(1.25), angle = 00)) + 
+  theme(plot.title = element_text(size = rel(1.5), angle = 00)) + 
+  theme(axis.text.x = element_text(size = 12, angle = 00),
+        axis.text.y = element_text(size = 12, angle = 90))+
+  theme(strip.text.x = element_text(size = 12))
+Graz_N_Ab
+
+
+# Night Time 
+Graz_glm_SG <- glmer(Grazers ~ Zone * Habitat * Sky_Glow + (1|Location_Num/Zone) + (1|Round), data = subset(ALAN_Night), family = poisson)
+drop1(Graz_glm_SG, test = "Chi")
+plot(fitted(Graz_glm_SG), residuals(Graz_glm_SG))
+Anova(Graz_glm_SG)
+summary(Graz_glm_SG)
+GrazSG_trend = emtrends(Graz_glm_SG, pairwise ~ Habitat * Zone, var = "Sky_Glow")
+GrazSG_trend$emtrends
+GrazSG_trend$contrasts
+GrazSG_trend$contrasts %>%
+  confint()
+test(GrazSG_trend)
+
+# Abundance of grazing species at night time - sky glow 
+Graz_SG_ab <- ggplot(GN, aes(x = Sky_Glow, y = Grazer_Sp_Abundance)) +
+  geom_point((aes(colour = factor(Location), shape = factor(Round))), size = 3) + 
+  labs(title= "c) Grazing Species Abundance (Night - Sky Glow)",
+       y="Grazing Species Abundance", x = "Sky Glow (mag arcsec-2)", colour = "Location", shape = "Sampling Round") + facet_wrap(~Zone + Habitat) +
+  theme_bw() + theme(panel.border = element_blank(), panel.grid.major = element_blank(),
+                     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"))+
+  theme(axis.title.y = element_text(size = rel(1.25), angle = 90)) + theme(axis.title.x = element_text(size = rel(1.25), angle = 00)) + 
+  theme(plot.title = element_text(size = rel(1.5), angle = 00)) + 
+  theme(axis.text.x = element_text(size = 12, angle = 00),
+        axis.text.y = element_text(size = 12, angle = 90))+
+  theme(strip.text.x = element_text(size = 12))
+Graz_SG_ab
+
+# Mobile Species Richness 
+
+# Day Time
+G_R_D <- glmer (Grazers_Richness ~ Lux_200 * Habitat * Zone + (1|Location_Num/Zone) + (1|Round), data = subset(ALAN_Day), family = poisson)
+drop1(G_R_D, test = "Chi")
+plot(fitted(G_R_D), residuals(G_R_D))
+Anova(G_R_D)
+summary(G_R_D)
+GRD_trends = emtrends(G_R_D, pairwise ~ Habitat * Zone, var = "Lux_200")
+GRD_trends$emtrends
+GRD_trends$contrasts
+GRD_trends$contrasts %>%
+  confint()
+test(GRD_trends)
+
+# Mobile species richness day time graph - Lux
+Graz_D_R <- ggplot(GD, aes(x = Lux_x200, y = Grazer_Richness)) +
+  geom_point((aes(colour = factor(Location), shape = factor(Round))), size = 3) + 
+  labs(title= "a) Grazing Species Richness (Day - Lux)",
+       y="Grazing Species Richness", x = "Lux (lumen/m2)", colour = "Location", shape = "Sampling Round") + facet_wrap(~Zone + Habitat) +
+  theme_bw() + theme(panel.border = element_blank(), panel.grid.major = element_blank(),
+                     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"))+
+  theme(axis.title.y = element_text(size = rel(1.25), angle = 90)) + theme(axis.title.x = element_text(size = rel(1.25), angle = 00)) + 
+  theme(plot.title = element_text(size = rel(1.5), angle = 00)) + 
+  theme(axis.text.x = element_text(size = 12, angle = 00),
+        axis.text.y = element_text(size = 12, angle = 90))+
+  theme(strip.text.x = element_text(size = 12))
+Graz_D_R
+
+#Night Time
+G_R_N <- glmer(Grazers_Richness ~ Zone * Habitat * Lux_0 + (1|Location_Num/Zone) + (1|Round), data = subset(ALAN_Night), family = poisson)
+drop1(G_R_N, test = "Chi")
+plot(fitted(G_R_N), residuals(G_R_N))
+Anova(G_R_N)
+summary(G_R_N)
+GRN_trend = emtrends(G_R_N, pairwise ~ Habitat, var = "Lux_0")
+GRN_trend$emtrends
+GRN_trend$contrasts
+GRN_trend$contrasts %>%
+  confint()
+test(GRN_trend)
+
+# Night time mobile species richness - Lux 
+Graz_N_R <- ggplot(GN, aes(x = Lux_x0, y = Grazers_Richness)) +
+  geom_point((aes(colour = factor(Location), shape = factor(Round))), size = 3) + 
+  labs(title= "b) Grazing Species Richness (Night - Lux)",
+       y="Grazing Species Richness", x = "Lux (lumen/m2)", colour = "Location", shape = "Sampling Round") + facet_wrap(~Zone + Habitat) +
+  theme_bw() + theme(panel.border = element_blank(), panel.grid.major = element_blank(),
+                     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"))+
+  theme(axis.title.y = element_text(size = rel(1.25), angle = 90)) + theme(axis.title.x = element_text(size = rel(1.25), angle = 00)) + 
+  theme(plot.title = element_text(size = rel(1.5), angle = 00)) + 
+  theme(axis.text.x = element_text(size = 12, angle = 00),
+        axis.text.y = element_text(size = 12, angle = 90))+
+  theme(strip.text.x = element_text(size = 12))
+Graz_N_R
+
+# Sky glow
+G_R_SG <- glmer(Grazers_Richness ~ Zone * Habitat * Sky_Glow + (1|Location_Num/Zone) + (1|Round), data = subset(ALAN_Night), family = poisson)
+drop1(G_R_SG, test = "Chi")
+plot(fitted(G_R_SG), residuals(G_R_SG))
+Anova(G_R_SG)
+summary(G_R_SG)
+
+
+# Mobile species richness and sky glow
+Mobile_SG_R <- ggplot(GN, aes(x = Sky_Glow, y = Mobile_Sp_Richness)) +
+  geom_point(aes(colour = factor(Location), shape = factor(Round))) + 
+  geom_smooth(method = lm, se = FALSE) +
+  labs(title= "c) Mobile Species Richness (Night - Sky Glow)",
+       y="Mobile Species Richness", x = "Sky Glow (mag arcsec-2)", colour = "Location", shape = "Sampling Round") + facet_wrap(~Zone + Habitat) +
+  theme_bw() + theme(panel.border = element_blank(), panel.grid.major = element_blank(),
+                     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"))+
+  theme(axis.title.y = element_text(size = rel(1.25), angle = 90)) + theme(axis.title.x = element_text(size = rel(1.25), angle = 00)) + 
+  theme(plot.title = element_text(size = rel(1.5), angle = 00)) + 
+  theme(axis.text.x = element_text(size = 12, angle = 00),
+        axis.text.y = element_text(size = 12, angle = 90))+
+  theme(strip.text.x = element_text(size = 12))
+Mobile_SG_R
+
+
+#Sessile species percent coverage
+
+#Day Time 
+S_A_D <- glmer (Sessile_Sp_Abundance ~ Zone * Habitat * Lux_200 + (1|Location/Zone) + (1|Round), data = subset(ALAN_Day), family = poisson)
+drop1(S_A_D, test = "Chi")
+plot(fitted(S_A_D), residuals(S_A_D))
+Anova(S_A_D)
+summary(S_A_D)
+SAD_trend = emtrends(S_A_D, pairwise ~ Habitat, var = "Lux_200")
+SAD_trend$emtrends
+SAD_trend$contrasts
+SAD_trend$contrasts %>%
+  confint()
+test(SAD_trend)
+
+# Percent coverage of sessile intertidal species during the day - Lux
+Ses_D_pc <- ggplot(GD, aes(x = Lux_x200, y = Sessile_Sp_PerCov)) +
+  geom_point((aes(colour = factor(Location), shape = factor(Round))), size = 3) +
+  labs(title= "a) Sessile Species Coverage (Day - Lux)",
+       y="Sessile Species Coverage (%)", x = "Lux (lumen/m2)", colour = "Location", shape = "Sampling Round") + facet_wrap(~Zone + Habitat) +
+  theme_bw() + theme(panel.border = element_blank(), panel.grid.major = element_blank(),
+                     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"))+
+  theme(axis.title.y = element_text(size = rel(1.25), angle = 90)) + theme(axis.title.x = element_text(size = rel(1.25), angle = 00)) + 
+  theme(plot.title = element_text(size = rel(1.5), angle = 00)) + 
+  theme(axis.text.x = element_text(size = 12, angle = 00),
+        axis.text.y = element_text(size = 12, angle = 90))+
+  theme(strip.text.x = element_text(size = 12))
+Ses_D_pc
+
+# Night Time 
+S_A_N <- glmer(Sessile_Sp_Abundance ~ Zone * Habitat * Lux_0 + (1|Location_Num/Zone) + (1|Round), data = subset(ALAN_Night), family = poisson)
+drop1(S_A_N, test = "Chi")
+plot(fitted(S_A_N), residuals(S_A_N))
+Anova(S_A_N)
+summary(S_A_N)
+SAN_trend = emtrends(S_A_N, pairwise ~ Habitat * Zone, var = "Lux_0")
+SAN_trend$emtrends
+SAN_trend$contrasts
+SAN_trend$contrasts %>%
+  confint()
+test(SAN_trend)
+
+# Percent coverage of sessile intertidal species at night - Lux
+Ses_N_pc <- ggplot(GN, aes(x = Lux_x0, y = Sessile_Sp_PC)) +
+  geom_point((aes(colour = factor(Location), shape = factor(Round))), size = 3) + 
+  labs(title= "b) Sessile Species Coverage (Night - Lux) ",
+       y="Sessile Species Coverage (%)", x = "Lux (lumen/m2)", colour = "Location", shape = "Sampling Round") + facet_wrap(~Zone + Habitat) +
+  theme_bw() + theme(panel.border = element_blank(), panel.grid.major = element_blank(),
+                     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"))+
+  theme(axis.title.y = element_text(size = rel(1.25), angle = 90)) + theme(axis.title.x = element_text(size = rel(1.25), angle = 00)) + 
+  theme(plot.title = element_text(size = rel(1.5), angle = 00)) + 
+  theme(axis.text.x = element_text(size = 12, angle = 00),
+        axis.text.y = element_text(size = 12, angle = 90))+
+  theme(strip.text.x = element_text(size = 12))
+Ses_N_pc
+
+# Night Time 
+S_SG_N <- glmer(Sessile_Sp_Abundance ~ Zone * Habitat * Sky_Glow + (1|Location_Num/Zone) + (1|Round), data = subset(ALAN_Night), family = poisson)
+drop1(S_SG_N, test = "Chi")
+plot(fitted(S_SG_N), residuals(S_SG_N))
+Anova(S_SG_N)
+summary(S_SG_N)
+SSGN_trend = emtrends(S_SG_N, pairwise ~ Habitat * Zone, var = "Sky_Glow")
+SSGN_trend$emtrends
+SSGN_trend$contrasts
+SSGN_trend$contrasts %>%
+  confint()
+test(SSGN_trend)
+
+# Percent coverage of sessile species at night - sky glow
+Ses_SG_pc <- ggplot(GN, aes(x = Sky_Glow, y = Sessile_Sp_PC)) +
+  geom_point((aes(colour = factor(Location), shape = factor(Round))), size = 3) + 
+  labs(title= "c) Sessile Species Coverage (Night - Sky Glow)",
+       y="Sessile Species Coverage (%)", x = "Sky Glow (mag arcsec-2)", colour = "Location", shape = "Sampling Round") + facet_wrap(~Zone + Habitat) +
+  theme_bw() + theme(panel.border = element_blank(), panel.grid.major = element_blank(),
+                     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"))+
+  theme(axis.title.y = element_text(size = rel(1.25), angle = 90)) + theme(axis.title.x = element_text(size = rel(1.25), angle = 00)) + 
+  theme(plot.title = element_text(size = rel(1.5), angle = 00)) + 
+  theme(axis.text.x = element_text(size = 12, angle = 00),
+        axis.text.y = element_text(size = 12, angle = 90))+
+  theme(strip.text.x = element_text(size = 12))
+Ses_SG_pc
+
+
+# Sessile intertidal species richness 
+
+# Day Time
+S_R_D <- lmer(Sessile_Sp_Richness ~ Zone * Habitat * Lux_200 + (1|Location_Num/Zone) + (1|Round), data = subset(ALAN_Day))
+drop1(S_R_D, test = "Chi")
+plot(fitted(S_R_D), residuals(S_R_D))
+Anova(S_R_D)
+summary(S_R_D)
+
+# Richness of intertidal sessile species during the day - Lux
+Ses_D_r <- ggplot(GD, aes(x = Lux_x200, y = Sessile_Sp_Richness)) +
+  geom_point(aes(colour = factor(Location), shape = factor(Round))) + 
+  geom_smooth(method = lm, se = FALSE) +
+  labs(title= "Sessile Species Richness (Day - Lux)",
+       y="Sessile Species Richness", x = "Day Time Lux (x200 lx)", colour = "Location", shape = "Sampling Round") + facet_wrap(~Zone + Habitat) +
+  theme_bw() + theme(panel.border = element_blank(), panel.grid.major = element_blank(),
+                     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"))+
+  theme(axis.title.y = element_text(size = rel(1.25), angle = 90)) + theme(axis.title.x = element_text(size = rel(1.25), angle = 00)) + 
+  theme(plot.title = element_text(size = rel(1.5), angle = 00)) + 
+  theme(axis.text.x = element_text(size = 12, angle = 00),
+        axis.text.y = element_text(size = 12, angle = 90))+
+  theme(strip.text.x = element_text(size = 12))
+Ses_D_r
+
+# Night Time 
+S_R_N <- lmer(Sessile_Sp_Richness ~ Zone * Habitat * Lux_0 + (1|Location_Num/Zone) + (1|Round), data = subset(ALAN_Night))
+drop1(S_R_N, test = "Chi")
+plot(fitted(S_R_N), residuals(S_R_N))
+Anova(S_R_N)
+summary(S_R_N)
+
+
+# Richness of intertidal sessile species at night - lux
+Ses_N_r <- ggplot(GN, aes(x = Lux_x0, y = Sessile_Sp_Richness)) +
+  geom_point(aes(colour = factor(Location), shape = factor(Round))) + 
+  geom_smooth(method = lm, se = FALSE) +
+  labs(title= "Sessile Species Richness (Night - Lux)",
+       y="Sessile Species Richness", x = "Night Time Lux (x0 lx)", colour = "Location", shape = "Sampling Round") + facet_wrap(~Zone + Habitat) +
+  theme_bw() + theme(panel.border = element_blank(), panel.grid.major = element_blank(),
+                     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"))+
+  theme(axis.title.y = element_text(size = rel(1.25), angle = 90)) + theme(axis.title.x = element_text(size = rel(1.25), angle = 00)) + 
+  theme(plot.title = element_text(size = rel(1.5), angle = 00)) + 
+  theme(axis.text.x = element_text(size = 12, angle = 00),
+        axis.text.y = element_text(size = 12, angle = 90))+
+  theme(strip.text.x = element_text(size = 12))
+Ses_N_r
+
+# Night Time 
+S_R_SG <- lmer(Sessile_Sp_Richness ~ Zone * Habitat * Sky_Glow + (1|Location_Num/Zone) + (1|Round), data = subset(ALAN_Night))
+drop1(S_R_SG, test = "Chi")
+plot(fitted(S_R_SG), residuals(S_R_SG))
+Anova(S_R_SG)
+summary(S_R_SG)
+
+# Richness of intertidal sessile species at night - sky glow
+Ses_SG_r <- ggplot(GN, aes(x = Sky_Glow, y = Sessile_Sp_Richness)) +
+  geom_point(aes(colour = factor(Location), shape = factor(Round))) + 
+  labs(title= "Sessile Species Richness (Night - Sky Glow)",
+       y="Sessile Species Richness", x = "Sky Glow (mag arcsec-2)", colour = "Location", shape = "Sampling Round") + facet_wrap(~Zone + Habitat) +
+  theme_bw() + theme(panel.border = element_blank(), panel.grid.major = element_blank(),
+                     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"))+
+  theme(axis.title.y = element_text(size = rel(1.25), angle = 90)) + theme(axis.title.x = element_text(size = rel(1.25), angle = 00)) + 
+  theme(plot.title = element_text(size = rel(1.5), angle = 00)) + 
+  theme(axis.text.x = element_text(size = 12, angle = 00),
+        axis.text.y = element_text(size = 12, angle = 90))+
+  theme(strip.text.x = element_text(size = 12))
+Ses_SG_r
+
+
+# Algal species percent coverage 
+
+# Day Time 
+A_PC_D <- glmer(Algal_Sp_Percent_Cover ~ Zone * Habitat * Lux_200 + (1|Location_Num/Zone) + (1|Round), data = subset(ALAN_Day), family = poisson)
+drop1(A_PC_D, test = "Chi")
+plot(fitted(A_PC_D), residuals(A_PC_D))
+Anova(A_PC_D)
+summary(A_PC_D)
+APCD_trend = emtrends(A_PC_D, pairwise ~ Habitat, var = "Lux_200")
+APCD_trend$emtrends
+APCD_trend$contrasts
+APCD_trend$contrasts %>%
+  confint()
+test(APCD_trend)
+
+# Percent coverage of algal species during the day - lux
+Algal_D_pc <- ggplot(GD, aes(x = Lux_x200, y = Algal_Sp_PC)) +
+  geom_point((aes(colour = factor(Location), shape = factor(Round))), size = 3) + 
+  labs(title= "a) Algal Species Coverage (Day - Lux)",
+       y="Algal Species Coverage (%)", x = "Lux (lumen/m2)", colour = "Location", shape = "Sampling Round") + facet_wrap(~Zone + Habitat) +
+  theme_bw() + theme(panel.border = element_blank(), panel.grid.major = element_blank(),
+                     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"))+
+  theme(axis.title.y = element_text(size = rel(1.25), angle = 90)) + theme(axis.title.x = element_text(size = rel(1.25), angle = 00)) + 
+  theme(plot.title = element_text(size = rel(1.5), angle = 00)) + 
+  theme(axis.text.x = element_text(size = 12, angle = 00),
+        axis.text.y = element_text(size = 12, angle = 90))+
+  theme(strip.text.x = element_text(size = 12))
+Algal_D_pc
+
+
+# Night Time 
+A_PC_N <- glmer(Algal_Sp_Percent_Cover ~ Zone * Habitat * Lux_0 + (1|Location_Num/Zone) + (1|Round), data = subset(ALAN_Night), family = poisson)
+drop1(A_PC_N, test = "Chi")
+plot(fitted(A_PC_N), residuals(A_PC_N))
+Anova(A_PC_N)
+summary(A_PC_N)
+APCN_trend = emtrends(A_PC_N, pairwise ~ Habitat * Zone, var = "Lux_0")
+APCN_trend$emtrends
+APCN_trend$contrasts
+APCN_trend$contrasts %>%
+  confint()
+test(APCN_trend)
+
+# Percent coverage of algal species at night - lux
+Algal_N_pc <- ggplot(GN, aes(x = Lux_x0, y = Algal_Sp_PC)) +
+  geom_point((aes(colour = factor(Location), shape = factor(Round))), size = 3) + 
+  labs(title= "b) Algal Species Coverage (Night - Lux)",
+       y="Algal Species Coverage (%)", x = "Lux (lumen/m2)", colour = "Location", shape = "Sampling Round") + facet_wrap(~Zone + Habitat) +
+  theme_bw() + theme(panel.border = element_blank(), panel.grid.major = element_blank(),
+                     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"))+
+  theme(axis.title.y = element_text(size = rel(1.25), angle = 90)) + theme(axis.title.x = element_text(size = rel(1.25), angle = 00)) + 
+  theme(plot.title = element_text(size = rel(1.5), angle = 00)) + 
+  theme(axis.text.x = element_text(size = 12, angle = 00),
+        axis.text.y = element_text(size = 12, angle = 90))+
+  theme(strip.text.x = element_text(size = 12))
+Algal_N_pc
+
+# Night Time
+A_PC_NSG <- glmer(Algal_Sp_Percent_Cover ~ Zone * Habitat * Sky_Glow + (1|Location_Num/Zone) + (1|Round), data = subset(ALAN_Night), family = poisson)
+drop1(A_PC_NSG, test = "Chi")
+plot(fitted(A_PC_NSG), residuals(A_PC_NSG))
+Anova(A_PC_NSG)
+summary(A_PC_NSG)
+APCSG_trend = emtrends(A_PC_NSG, pairwise ~ Habitat, var = "Sky_Glow")
+APCSG_trend$emtrends
+APCSG_trend$contrasts
+APCSG_trend$contrasts %>%
+  confint()
+test(APCSG_trend)
+
+APCSG_trend1 = emtrends(A_PC_NSG, pairwise ~ Zone, var = "Sky_Glow")
+APCSG_trend1$emtrends
+APCSG_trend1$contrasts
+APCSG_trend1$contrasts %>%
+  confint()
+test(APCSG_trend1)
+
+# Percent coverage of algal species at night - sky glow
+Algal_SG_pc <- ggplot(GN, aes(x = Sky_Glow, y = Algal_Sp_PC)) +
+  geom_point(aes(colour = factor(Location), shape = factor(Round))) + 
+  labs(title= "c) Algal Species Coverage (Night - Sky Glow)",
+       y="Algal Species Coverage (%)", x = "Sky Glow (mag arcsec-2)", colour = "Location", shape = "Sampling Round")+ facet_wrap(~Zone + Habitat) +
+  theme_bw() + theme(panel.border = element_blank(), panel.grid.major = element_blank(),
+                     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"))+
+  theme(axis.title.y = element_text(size = rel(1.25), angle = 90)) + theme(axis.title.x = element_text(size = rel(1.25), angle = 00)) + 
+  theme(plot.title = element_text(size = rel(1.5), angle = 00)) + 
+  theme(axis.text.x = element_text(size = 12, angle = 00),
+        axis.text.y = element_text(size = 12, angle = 90))+
+  theme(strip.text.x = element_text(size = 12))
+Algal_SG_pc
+
+# Algal species richness 
+
+# Day Time 
+A_R_D <- glmer(Algal_Sp_Richness ~ Zone * Habitat * Lux_200 + (1|Location_Num/Zone) + (1|Round), data = subset(ALAN_Day), family = poisson)
+drop1(A_R_D, test = "Chi")
+plot(fitted(A_R_D), residuals(A_R_D))
+Anova(A_R_D)
+summary(A_R_D)
+ARD_trend = emtrends(A_R_D, pairwise ~ Habitat, var = "Lux_200")
+ARD_trend$emtrends
+ARD_trend$contrasts
+ARD_trend$contrasts %>%
+  confint()
+test(ARD_trend)
+
+# Algal species richness during the day - lux
+Algal_D_r <- ggplot(GD, aes(x = Lux_x200, y = Algal_Sp_Richness)) +
+  geom_point((aes(colour = factor(Location), shape = factor(Round))), size =3) + 
+  labs(title= "Algal Species Richness (Day - Lux)",
+       y="Algal Species Richness", x = "Lux (lumen/m2)", colour = "Location", shape = "Sampling Round")+ facet_wrap(~Zone + Habitat) +
+  theme_bw() + theme(panel.border = element_blank(), panel.grid.major = element_blank(),
+                     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"))+
+  theme(axis.title.y = element_text(size = rel(1.25), angle = 90)) + theme(axis.title.x = element_text(size = rel(1.25), angle = 00)) + 
+  theme(plot.title = element_text(size = rel(1.5), angle = 00)) + 
+  theme(axis.text.x = element_text(size = 12, angle = 00),
+        axis.text.y = element_text(size = 12, angle = 90))+
+  theme(strip.text.x = element_text(size = 12))
+Algal_D_r
+
+# Night Time 
+A_R_N <- glmer(Algal_Sp_Richness ~ Zone * Habitat * Lux_0 + (1|Location_Num/Zone) + (1|Round), data = subset(ALAN_Night), family = poisson)
+drop1(A_R_N, test = "Chi")
+plot(fitted(A_R_N), residuals(A_R_N))
+Anova(A_R_N)
+summary(A_R_N)
+
+
+# Algal species richness at night time - lux 
+Algal_N_r <- ggplot(GN, aes(x = Lux_x0, y = Algal_Sp_Richness)) +
+  geom_point(aes(colour = factor(Location), shape = factor(Round))) + 
+  geom_smooth(method = lm, se = FALSE) +
+  labs(title= "Algal Species Richness (Night - Lux)",
+       y="Algal Species Richness", x = "Lux (x0 lx)", colour = "Location", shape = "Sampling Round")+ facet_wrap(~Zone + Habitat) +
+  theme_bw() + theme(panel.border = element_blank(), panel.grid.major = element_blank(),
+                     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"))+
+  theme(axis.title.y = element_text(size = rel(1.25), angle = 90)) + theme(axis.title.x = element_text(size = rel(1.25), angle = 00)) + 
+  theme(plot.title = element_text(size = rel(1.5), angle = 00)) + 
+  theme(axis.text.x = element_text(size = 12, angle = 00),
+        axis.text.y = element_text(size = 12, angle = 90))+
+  theme(strip.text.x = element_text(size = 12))
+Algal_N_r
+
+
+# Night Time 
+A_R_SG <- glmer(Algal_Sp_Richness ~ Zone * Habitat * Sky_Glow + (1|Location_Num/Zone) + (1|Round), data = subset(ALAN_Night), family = poisson)
+drop1(A_R_SG, test = "Chi")
+plot(fitted(A_R_SG), residuals(A_R_SG))
+Anova(A_R_SG)
+summary(A_R_SG)
+
+
+# Algal species richness during the night - sky glow
+Algal_SG_r <- ggplot(GN, aes(x = Sky_Glow, y = Algal_Sp_Richness)) +
+  geom_point(aes(colour = factor(Location), shape = factor(Round))) + 
+  geom_smooth(method = lm, se = FALSE) +
+  labs(title= "Algal Species Richness (Night - Sky Glow)",
+       y="Algal Species Richness", x = "Sky Glow (mag arcsec-2)", colour = "Location", shape = "Sampling Round")+ facet_wrap(~Zone + Habitat) +
+  theme_bw() + theme(panel.border = element_blank(), panel.grid.major = element_blank(),
+                     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"))+
+  theme(axis.title.y = element_text(size = rel(1.25), angle = 90)) + theme(axis.title.x = element_text(size = rel(1.25), angle = 00)) + 
+  theme(plot.title = element_text(size = rel(1.5), angle = 00)) + 
+  theme(axis.text.x = element_text(size = 12, angle = 00),
+        axis.text.y = element_text(size = 12, angle = 90))+
+  theme(strip.text.x = element_text(size = 12))
+Algal_SG_r
+
+# Artificial Light At Night Intertidal Grazing Surveys using Wax Discs
+
+#Wax discs -% grazed 
+ALAN_June_WD_Data <- read_excel("OneDrive - Macquarie University/ALAN Data/ALAN_June_WD_Data.xlsx")
+View(ALAN_June_WD_Data)
+
+ALAN_WD <- as.data.frame(unclass(ALAN_June_WD_Data))
+str(ALAN_WD)
+
+ALAN_WD$Location_Num = as.factor(ALAN_WD$Location_Num)
+ALAN_WD$Wax_Disc_Number = as.factor(ALAN_WD$Wax_Disc_Number)
+str(ALAN_WD)
+
+#Percent Grazed 
+WD_Grazed <- lmer(Percent_Grazed ~ Zone * Environment + (1|Location_Num/Zone), data = subset(ALAN_WD))
+drop1(WD_Grazed, test = "Chi")
+plot(fitted(WD_Grazed), residuals(WD_Grazed))
+Anova(WD_Grazed)
+summary(WD_Grazed)
+
+
+# Percentage of wax discs that were grazed
+WD_Graz_plot <- ddply(ALAN_WD, c("Zone", "Environment"), summarise, Mean_WDG = mean(Percent_Grazed), SD_WDG = sd(Percent_Grazed))
+ggplot(WD_Graz_plot, aes(x = Environment, y = Mean_WDG)) +
+  geom_bar(stat = "identity") + facet_wrap(.~Zone) +
+  ggtitle("a) Percent of Wax Disc Grazed") + ylab("Percentage (%)") + xlab("Habitat") +
+  geom_errorbar(aes(ymin = Mean_WDG - SD_WDG, ymax = Mean_WDG + SD_WDG), width = 0.2) +
+  theme_bw() + theme(panel.border = element_blank(), panel.grid.major = element_blank(),
+                     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"))+
+  theme(axis.title.y = element_text(size = rel(1.25), angle = 90)) + theme(axis.title.x = element_text(size = rel(1.25), angle = 00)) + 
+  theme(plot.title = element_text(size = rel(1.5), angle = 00)) + 
+  theme(axis.text.x = element_text(size = 12, angle = 00),
+        axis.text.y = element_text(size = 12, angle = 90))+
+  theme(strip.text.x = element_text(size = 12))
+
+
+#Number of Marks
+WD_Marks <- lmer(Num_of_Marks ~ Zone * Environment + (1|Location_Num/Zone), data = subset(ALAN_WD))
+drop1(WD_Marks, test = "Chi")
+plot(fitted(WD_Marks), residuals(WD_Marks))
+Anova(WD_Marks)
+summary(WD_Marks)
+WDM_emm = emmeans(WD_Marks, specs = pairwise ~ Environment, type = "response")
+WDM_emm$emmeans
+WDM_emm$contrasts
+WDM_emm$contrasts %>%  
+  confint()
+test(WDM_emm)
+
+# Number of markings on wax discs 
+WD_Mark_plot <- ddply(ALAN_WD, c("Zone", "Environment"), summarise, Mean_WDM = mean(Num_of_Marks), SD_WDM = sd(Num_of_Marks))
+ggplot(WD_Mark_plot, aes(x = Environment, y = Mean_WDM)) +
+  geom_bar(stat = "identity") + facet_wrap(.~Zone) +
+  ggtitle("b) Number of Marks on Wax Disc") + ylab("Average Number of Marks") + xlab("Habitat") +
+  geom_errorbar(aes(ymin = Mean_WDM - SD_WDM, ymax = Mean_WDM + SD_WDM), width = 0.2) +
+  theme_bw() + theme(panel.border = element_blank(), panel.grid.major = element_blank(),
+                     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"))+
+  theme(axis.title.y = element_text(size = rel(1.25), angle = 90)) + theme(axis.title.x = element_text(size = rel(1.25), angle = 00)) + 
+  theme(plot.title = element_text(size = rel(1.5), angle = 00)) + 
+  theme(axis.text.x = element_text(size = 12, angle = 00),
+        axis.text.y = element_text(size = 12, angle = 90))+
+  theme(strip.text.x = element_text(size = 12))
+
+#Diversity of Marks
+WD_Div <- lmer(Mark_Diversity ~ Zone * Environment + (1|Location_Num/Zone), data = subset(ALAN_WD))
+drop1(WD_Div, test = "Chi")
+plot(fitted(WD_Div), residuals(WD_Div))
+Anova(WD_Div)
+summary(WD_Div)
+
+
+# Diversity of markings on wax discs
+WD_Div_plot <- ddply(ALAN_WD, c("Zone", "Environment"), summarise, Mean_WDD = mean(Mark_Diversity), SD_WDD = sd(Mark_Diversity))
+ggplot(WD_Div_plot, aes(x = Environment, y = Mean_WDD)) +
+  geom_bar(stat = "identity") + facet_wrap(.~Zone) +
+  ggtitle("c) Diversity of Markings on Wax Discs") + ylab("Diversity of Marks") + xlab("Habitat") +
+  geom_errorbar(aes(ymin = Mean_WDD - SD_WDD, ymax = Mean_WDD + SD_WDD), width = 0.2) +
+  theme_bw() + theme(panel.border = element_blank(), panel.grid.major = element_blank(),
+                     panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"))+
+  theme(axis.title.y = element_text(size = rel(1.25), angle = 90)) + theme(axis.title.x = element_text(size = rel(1.25), angle = 00)) + 
+  theme(plot.title = element_text(size = rel(1.5), angle = 00)) + 
+  theme(axis.text.x = element_text(size = 12, angle = 00),
+        axis.text.y = element_text(size = 12, angle = 90))+
+  theme(strip.text.x = element_text(size = 12))
