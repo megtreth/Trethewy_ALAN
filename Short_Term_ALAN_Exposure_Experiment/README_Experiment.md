@@ -1,4 +1,5 @@
 ## The files in this folder are to be used in association with the short-term ALAN exposure experiment
+### Each of the associated spreadsheets are included (all in .xlsx format)
 
 #### ALAN_Experiment_Script - the associated R Studio script for the results of this short term ALAN exposure experiment
 #### Bradleys_Head_July_Data.xlxs/.csv - the total data of all intertidal species observed under the 3 light treatments and control over the 3 night sampling period in July 2020 along the rocky shore at Bradley's Head Reserve
